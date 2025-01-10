@@ -14,27 +14,27 @@
             <tr>
                 <td style="padding-right: 30px; padding-bottom: 10px;"><label  for="name">Applicant's full name</label></td>
                 <td style="padding-right: 70px;padding-bottom: 10px;">
-                    <select  id="name">
+                    <select>
                     <option selected disabled>SELECT</option>
                     <option value="Miss">MISS</option>
                     <option value="Mrs">MRS</option>
                     <option value="Mr">MR</option>
                     </select>
-                    <input type="text" id="name"></td>
-                <td style="padding-left: 70px; padding-bottom: 10px;"><label >Care of</label></td>
+                    <input required type="text" id="name"></td>
+                <td style="padding-left: 70px; padding-bottom: 10px;"><label>Care of</label></td>
                 <td style="padding-left: 30px; padding-bottom: 10px;"><input type="radio" name="parent" value="parents">Parents<input type="radio" name="parent" value="guardian">Guardian</td>
             </tr>
             <tr>
                 <td style="padding-right: 30px; padding-bottom: 10px;"><label for="fathername">Father's Name</label></td>
                 <td style="padding-right: 70px; padding-bottom: 10px;">
-                    <select id="fathername">
+                    <select >
                     <option selected disabled value="MR">MR</option>
                     </select>
                     <input id="fathername" type="text">
                 </td>
                 <td style="padding-left: 70px; padding-bottom: 10px;"><label for="Mothername">Mother's Name</label></td>
                 <td style="padding-left: 30px; padding-bottom: 10px;">
-                    <select id="Mothername">
+                    <select >
                     <option selected disabled value="MRs">MRS</option>
                     </select>
                     <input id="Mothername" type="text">
@@ -43,22 +43,21 @@
             <tr>
                 <td style="padding-right: 30px; padding-bottom: 10px;"><label>Gender</label></td>
                 <td style="padding-right: 70px; padding-bottom: 10px;"><input type="radio" name="gender" value="male">Male <input type="radio" name="gender" value="female">Female <input type="radio" name="gender" value="other">Other</td>
-                <td style="padding-left: 70px; padding-bottom: 10px;"><label for="">Date of Birth</label></td>
-                <td style="padding-left: 30px; padding-bottom: 10px;"><input type="date"></td>
-                
+                <td style="padding-left: 70px; padding-bottom: 10px;"><label for="dob">Date of Birth</label></td>
+                <td style="padding-left: 30px; padding-bottom: 10px;"><input type="date" id="dob"></td>
             </tr>
             <tr>
-                <td style="padding-right: 30px; padding-bottom: 10px;"><label for="">Marital status</label></td>
+                <td style="padding-right: 30px; padding-bottom: 10px;"><label for="ms">Marital status</label></td>
                 <td style="padding-right: 70px; padding-bottom: 10px;">
-                    <select name="" id="">
+                    <select id="ms">
                         <option selected disabled>Select</option>
                         <option value="Married"> Married</option>
                         <option value="Unmarried">Unmarried</option>
                     </select>
                 </td>
-                <td style="padding-left: 70px; padding-bottom: 10px;"><label for="">Category</label></td>
+                <td style="padding-left: 70px; padding-bottom: 10px;"><label for="cat">Category</label></td>
                 <td style="padding-left: 30px; padding-bottom: 10px;">
-                    <select name="" id="">
+                    <select id="cat">
                         <option>Select</option>
                     </select>
                 </td>
@@ -72,9 +71,9 @@
             <tr>
                 <td style="padding-right: 30px; padding-bottom: 10px;"><label for="">EWS</label></td>
                 <td style="padding-right: 70px; padding-bottom: 10px;"><input type="radio" name="hand" value="yes">Yes <input type="radio" name="hand" value="no">No</td>
-                <td style="padding-left: 70px; padding-bottom: 10px;"><label for="">Religion</label></td>
+                <td style="padding-left: 70px; padding-bottom: 10px;"><label for="rel">Religion</label></td>
                 <td style="padding-left: 30px; padding-bottom: 10px;">
-                    <select name="" id="">
+                    <select id="rel">
                         <option>Select</option>
                     </select>
                 </td>
@@ -85,30 +84,30 @@
             <legend>Contact Details</legend>
             <table>
                 <tr>
-                    <td style="padding-right: 30px; padding-bottom:10px;"><label for="">Mobile Number</label></td>
-                    <td style="padding-right: 70px; padding-bottom:10px;"><input type="text"></td>
-                    <td style="padding-left: 70px; padding-bottom:10px;"><label for="">Email Id</label></td>
-                    <td style="padding-left: 30px; padding-bottom:10px;"><input type="text"></td>
+                    <td style="padding-right: 30px; padding-bottom:10px;"><label for="Mno">Mobile Number</label></td>
+                    <td style="padding-right: 70px; padding-bottom:10px;"><input id="Mno" type="text"></td>
+                    <td style="padding-left: 70px; padding-bottom:10px;"><label for="email">Email Id</label></td>
+                    <td style="padding-left: 30px; padding-bottom:10px;"><input required id="email" type="text"></td>
                 </tr>
                 <tr>
-                    <td style="padding-right: 30px; padding-bottom:10px;"><label for="">Address Line 1</label></td>
-                    <td style="padding-right: 70px; padding-bottom:10px;"><input type="text"></td>
-                    <td style="padding-left: 70px; padding-bottom:10px;"><label for="">Address Line 2</label></td>
-                    <td style="padding-left: 30px; padding-bottom:10px;"><input type="text"></td>
+                    <td style="padding-right: 30px; padding-bottom:10px;"><label for="add1">Address Line 1</label></td>
+                    <td style="padding-right: 70px; padding-bottom:10px;"><input required id="add1" type="text"></td>
+                    <td style="padding-left: 70px; padding-bottom:10px;"><label for="add2">Address Line 2</label></td>
+                    <td style="padding-left: 30px; padding-bottom:10px;"><input id="add2" type="text"></td>
                 </tr>
                 <tr>
-                    <td style="padding-right: 30px; padding-bottom:10px;"><label for="">City</label></td>
-                    <td style="padding-right: 70px; padding-bottom:10px;"><input type="text"></td>
-                    <td style="padding-left: 70px; padding-bottom:10px;"><label for="">State</label></td>
+                    <td style="padding-right: 30px; padding-bottom:10px;"><label for="city">City</label></td>
+                    <td style="padding-right: 70px; padding-bottom:10px;"><input id="city" type="text"></td>
+                    <td style="padding-left: 70px; padding-bottom:10px;"><label for="state">State</label></td>
                     <td style="padding-left: 30px; padding-bottom:10px;">
-                        <select name="" id="">
+                        <select required name="" id="state">
                             <option>Select</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
-                    <td style="padding-right: 30px; padding-bottom:10px;"><label for="">Pincode</label></td>
-                    <td style="padding-right: 70px; padding-bottom:10px;"><input type="text"></td>
+                    <td style="padding-right: 30px; padding-bottom:10px;"><label for="pin">Pincode</label></td>
+                    <td style="padding-right: 70px; padding-bottom:10px;"><input id="pin" type="text"></td>
                 </tr>
             </table>
         </fieldset>
@@ -211,16 +210,16 @@
             <legend>Identification Details</legend>
             <table>
                 <tr>
-                    <td style=" padding-bottom:10px;"><label  for="name">Aadhar Card Number</label></td>
-                    <td style="padding-right:70px; padding-bottom:10px;"><input type="number"></td>
-                    <td><label  for="name">PAN Card Number</label></td>
-                    <td><input type="number"></td>
+                    <td style=" padding-bottom:10px;"><label  for="Ano">Aadhar Card Number</label></td>
+                    <td style="padding-right:70px; padding-bottom:10px;"><input required id="Ano" type="number"></td>
+                    <td><label  for="Pno">PAN Card Number</label></td>
+                    <td><input required id="Pno" type="number"></td>
                 </tr>
                 <tr>
-                    <td style="padding-right: 50px; padding-bottom:10px;"><label  for="name">Upload Photo</label></td>
-                    <td style="padding-right: 50px; padding-bottom:10px;"><input type="file"></td>
-                    <td style="padding-right: 50px; padding-bottom:10px;"><label  for="name">Upload Signature</label></td>
-                    <td><input type="file"></td>
+                    <td style="padding-right: 50px; padding-bottom:10px;"><label  for="photo">Upload Photo</label></td>
+                    <td style="padding-right: 50px; padding-bottom:10px;"><input id="photo" type="file"></td>
+                    <td style="padding-right: 50px; padding-bottom:10px;"><label  for="sign">Upload Signature</label></td>
+                    <td><input id="sign" type="file"></td>
                 </tr>
             </table>
         </fieldset>
