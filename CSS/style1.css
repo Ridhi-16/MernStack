@@ -1,0 +1,21 @@
+*{
+    background-color: bisque;
+}
+h1{
+    color: blue;
+}
+pre{
+    font-size: larger;
+    color: blueviolet;
+}
+#pre1{
+    color: crimson;
+}
+fieldset{
+    border-color: green;
+    border-width: 5px;
+}
+.end{
+    text-align: center;
+    text-decoration:underline;
+}
