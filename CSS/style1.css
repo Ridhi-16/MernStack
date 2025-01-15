@@ -19,3 +19,17 @@ fieldset{
     text-align: center;
     text-decoration:underline;
 }
+h1{
+    color:red;
+}
+.main{
+    height: 50px;
+    width: 50px;
+    background-color: aqua;
+    margin-top:10px;
+}
+.c1{
+    border-style: solid ;
+    border-color: red;
+    border-width: 10px;
+}

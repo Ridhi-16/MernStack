@@ -1,7 +1,45 @@
-div{
+.sun{
+    height: 50px;
+    width: 50px;
+    background-color:yellow;
+    border-radius: 50%;
+    border:1px solid;
+    margin-left:400px;
+
+
+}
+.main{
+    
+    margin:100px;
+    margin-top:30px;
+}
+
+.triangle{
     height:0px;
     width:0px;
-    border-bottom: blue solid 100px;
-    border-left: transparent solid 50px;
-    border-right: transparent solid 50px;
+    border-bottom:brown solid 100px;
+    border-left: transparent solid 100px;
+    border-right: transparent solid 100px;
+}
+.square{
+    margin-top: 20px;
+    height: 150px;
+    width: 200px;
+    background-color:rgb(115, 204, 231);
+    border:solid 1px;
+}
+.square1{
+    height:30px;
+    width:30px;
+    /* margin-top: 20px; */
+    margin-left: 80px;
+    background-color: white;
+    border:solid 1px;
+}
+.square2{
+    margin-top:20px;
+    margin-left:75px;
+    height:70px;
+    width:37px;
+    border:solid 1px;
 }
