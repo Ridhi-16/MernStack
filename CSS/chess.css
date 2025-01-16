@@ -1,8 +1,9 @@
 .main{
+    margin-left:250px;
     height: 800px;
     width:800px;
     background-color:red;
-    border:ridge 50px grey;
+    border:solid 30px grey;
 }
 .row1{
     height: 100px;
@@ -25,5 +26,16 @@
     background-color:white;
     width:100px;
     float:left;
-
+}
+.whicons{
+    color:black;
+    padding:25px;
+    font-size: 50px;
+    text-align: center;
+}
+.blicons{
+    color:white;
+    padding:25px;
+    font-size: 50px;
+    text-align: center;
 }
