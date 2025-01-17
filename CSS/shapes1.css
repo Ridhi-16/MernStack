@@ -1,0 +1,14 @@
+.triangle1{
+    height: 0px;
+    width: 0px;
+    border-top: solid red 75px;
+    border-left: solid transparent 75px;
+    border-right: solid transparent 75px;
+}
+.triangle{
+    height: 0px;
+    width: 0px;
+    border-bottom: solid red 75px;
+    border-left: solid transparent 75px;
+    border-right: solid transparent 75px;
+}
