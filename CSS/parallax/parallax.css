@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+.main{
+    height:600px;
+    background: url(parallax-img/skogafoss-waterfall-iceland-guy-red-jacket-looks-skogafoss-waterfall.jpg) no-repeat center/cover fixed ;
+}
+.heading{
+    height: 50px;
+    color:black;
+    text-align: center;
+    padding-top: 200px;
+    font-size: 100px;
+    
+}
+.para{
+    
+    font-family:"Rouge Script", serif;
+    font-size: 30px;
+    font-weight: bolder;
+    font-style: italic;
+    color:orangered;
+    text-align: center;
+    font-style: italic;
+}
+.mountain{
+    height: 500px;
+    background:url(parallax-img/51.jpg) no-repeat center/cover fixed ;
+}
+.mountpara{
+    height: 100px;
+    color: white;
+    font-weight: bolder;
+    font-style: italic;
+    text-align: center;
+    padding-top: 200px;
+}
+.oceans{
+    height: 500px;
+    background: url(parallax-img/8676.jpg) no-repeat center/cover fixed;
+    text-align: center;
+    font-size: 100px;
+    padding-top: 200px;
+}
+.oceanpara{
+    font-family:"Rouge Script", serif;
+    font-size: 30px;
+    font-weight: bolder;
+    font-style: italic;
+    
+    color: black;
+    text-align: center;
+    
+}
+.deserts{
+    height: 500px;
+    background:url(parallax-img/morning-sunlight-washes-desert-casting-shadows-sand.jpg) no-repeat center/cover fixed;
+    text-align: center;
+    font-size: 100px;
+    padding-top: 200px;
+}
