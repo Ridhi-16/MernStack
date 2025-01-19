@@ -5,11 +5,10 @@
 }
 .parallax{
     border: ridge 50px black;
-    background: url(parallax-img/unrecognizable-stylish-woman-wearing-stylish-hat-long-black-coat.png) no-repeat left/cover fixed;
 }
 .main{
     height:600px;
-    background: url(parallax-img/skogafoss-waterfall-iceland-guy-red-jacket-looks-skogafoss-waterfall.jpg) no-repeat center/cover;
+    background: url(parallax-img/skogafoss-waterfall-iceland-guy-red-jacket-looks-skogafoss-waterfall.jpg) no-repeat center/cover fixed;
 }
 .heading{
     height: 50px;
@@ -30,7 +29,7 @@
 } */
 .mountain{
     height: 500px;
-    background:url(parallax-img/51.jpg) no-repeat center/cover ;
+    background:url(parallax-img/51.jpg) no-repeat center/cover fixed ;
 }
 /* .oceanhead{
     background-color: black;
@@ -47,7 +46,7 @@
 }
 .oceans{
     height: 500px;
-    background: url(parallax-img/8676.jpg) no-repeat center/cover ;
+    background: url(parallax-img/8676.jpg) no-repeat center/cover fixed ;
     text-align: center;
     font-size: 100px;
     padding-top: 200px;
@@ -63,7 +62,7 @@
 }
 .deserts{
     height: 500px;
-    background:url(parallax-img/morning-sunlight-washes-desert-casting-shadows-sand.jpg) no-repeat center/cover;
+    background:url(parallax-img/morning-sunlight-washes-desert-casting-shadows-sand.jpg) no-repeat center/cover fixed;
     text-align: center;
     font-size: 100px;
     padding-top: 200px;
