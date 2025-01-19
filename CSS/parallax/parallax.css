@@ -3,20 +3,23 @@
     margin:0;
     padding:0;
 }
+.parallax{
+    border: ridge 50px black;
+    background: url(parallax-img/unrecognizable-stylish-woman-wearing-stylish-hat-long-black-coat.png) no-repeat left/cover fixed;
+}
 .main{
     height:600px;
-    background: url(parallax-img/skogafoss-waterfall-iceland-guy-red-jacket-looks-skogafoss-waterfall.jpg) no-repeat center/cover fixed ;
+    background: url(parallax-img/skogafoss-waterfall-iceland-guy-red-jacket-looks-skogafoss-waterfall.jpg) no-repeat center/cover;
 }
 .heading{
     height: 50px;
-    color:black;
     text-align: center;
     padding-top: 200px;
     font-size: 100px;
+    letter-spacing: 10px;
     
 }
-.para{
-    
+/* .para{
     font-family:"Rouge Script", serif;
     font-size: 30px;
     font-weight: bolder;
@@ -24,11 +27,16 @@
     color:orangered;
     text-align: center;
     font-style: italic;
-}
+} */
 .mountain{
     height: 500px;
-    background:url(parallax-img/51.jpg) no-repeat center/cover fixed ;
+    background:url(parallax-img/51.jpg) no-repeat center/cover ;
 }
+/* .oceanhead{
+    background-color: black;
+    color:rgb(245, 245, 220)
+
+} */
 .mountpara{
     height: 100px;
     color: white;
@@ -39,7 +47,7 @@
 }
 .oceans{
     height: 500px;
-    background: url(parallax-img/8676.jpg) no-repeat center/cover fixed;
+    background: url(parallax-img/8676.jpg) no-repeat center/cover ;
     text-align: center;
     font-size: 100px;
     padding-top: 200px;
@@ -49,14 +57,13 @@
     font-size: 30px;
     font-weight: bolder;
     font-style: italic;
-    
     color: black;
-    text-align: center;
-    
+    text-align: justify;
+    padding:50px 80px;
 }
 .deserts{
     height: 500px;
-    background:url(parallax-img/morning-sunlight-washes-desert-casting-shadows-sand.jpg) no-repeat center/cover fixed;
+    background:url(parallax-img/morning-sunlight-washes-desert-casting-shadows-sand.jpg) no-repeat center/cover;
     text-align: center;
     font-size: 100px;
     padding-top: 200px;
