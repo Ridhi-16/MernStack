@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+header{
+    
+    background-color:#f8f8f8;
+    display:flex;
+    padding:1.0rem;
+    justify-content: space-between;
+
+}
+header h2{
+    color:#BD8222;
+    font-size: 2rem;
+    
+}
+.nav ul li a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color:black;
+}
+.nav ul li{
+    list-style: none;
+    padding-right:2rem
+}
+.nav ul{
+    display:flex;
+    justify-content: end;
+}
+.nav ul li a:hover{
+    text-decoration: underline;
+    color:gold
+}
+.intro{
+    height:50rem;
+    background:url(jewels/home-2-hotspot-img1.jpg) no-repeat center/cover ;
+}
