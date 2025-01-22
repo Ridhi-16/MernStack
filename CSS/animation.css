@@ -8,8 +8,8 @@
     /* background:url(Images/mountain.png) no-repeat center/cover fixed; */
     background-color:skyblue;
     
-    animation:mountain 10s 0s infinite alternate;
-    filter: brightness(30%);
+    animation:mountain 15s 0s infinite alternate;
+    filter: brightness(20%);
 }
 @keyframes mountain{
     from{
@@ -17,18 +17,18 @@
     }
     to {
         
-        filter: brightness(100%);
+        filter: brightness(120%);
     }
 }
 .sun{
     height:100px;
     width:100px;
     border-radius: 300px;
-    background-color: orange;
+    background:repeating-radial-gradient(yellow,orangered);
     position:absolute;
     left:550px;
-    top:400px;
-    animation:sun 10s 0s infinite alternate;
+    top:460px;
+    animation:sun 15s 0s infinite alternate;
     z-index:-1;
 }
 @keyframes sun{
@@ -36,8 +36,7 @@
         transform:translateY(0px);
     }
     to{
-        transform:translateY(-250px);
-        /* z-index: 1; */ 
+        transform:translateY(-270px); 
     }
 } 
 .clouds{
@@ -45,7 +44,8 @@
     width:100%;
     position:absolute;
     top:100px;
-    animation: cloud  15s 0s infinite alternate;
+    animation: cloud  20s 0s infinite alternate;
+    opacity: 75%;
 }
 @keyframes cloud{
     from{
