@@ -42,10 +42,11 @@ header h2{
     width:120px;
     height:30px;
     background-color:#F78F10;
-    border: solid 1px black;
+    color:white;
     position:relative;
     top:650px;
     left:640px;
+    border: none;
 }
 .display h1{
     margin:15px;
@@ -63,11 +64,41 @@ header h2{
     grid-template-columns: auto auto auto;
 }
 .grid div {
-    background-color: #f1f1f1;
+    background-color:white;
     padding: 10px;
     font-size: 30px;
     text-align: center;
 }
+.grid div h5{
+    margin:10px;
+    color:#B36D05;
+}
 .grid div p{
-
+    font-size: 15px;
+}
+h6{
+    color:#f39f21;
+    font-weight:normal;
+    margin:10px;
+}
+.grid button{
+    background-color:rgb(243, 159, 33);
+    width:80px;
+    height:30px;
+    color:white;
+    border: none;
+}
+.background{
+    height:800px;
+    background: url(jewels/bg-header.png) no-repeat center/cover fixed;
+}
+.background div{
+    background-color: rgba(247, 143, 16,30%);
+    height:800px;
+}
+.about h1{
+    font-size:40px;
+    margin:10px;
+    color:#f3a126;
+    text-align: center;
 }
