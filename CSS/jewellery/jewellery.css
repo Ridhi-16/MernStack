@@ -89,16 +89,44 @@ h6{
     border: none;
 }
 .background{
-    height:800px;
+    height:450px;
     background: url(jewels/bg-header.png) no-repeat center/cover fixed;
 }
 .background div{
     background-color: rgba(247, 143, 16,30%);
-    height:800px;
+    height:450px;
 }
 .about h1{
     font-size:40px;
     margin:10px;
     color:#f3a126;
     text-align: center;
+   
+    display:block;
+}
+.para{
+    height: auto;
+    display:flex;   
+}
+.para p{
+    text-align:justify;
+    margin:50px;
+}
+.feedback{
+    margin-top:20px;
+    height:100px;
+    background-color: #ba7d1a;
+    color:white;
+    text-align: center;
+    padding:15px;
+}
+.feedback h3{
+    margin-top:15px;
+}
+footer{
+    text-align: center;
+}
+.end{
+    color:#ba7d1a;
+    font-weight: bold;
 }
