@@ -4,11 +4,12 @@
     box-sizing: border-box;
 }
 header{
-    
+    width:100vw;
     background-color:#f8f8f8;
     display:flex;
     padding:1.0rem;
     justify-content: space-between;
+    position:fixed;
 
 }
 header h2{
@@ -36,4 +37,37 @@ header h2{
 .intro{
     height:50rem;
     background:url(jewels/home-2-hotspot-img1.jpg) no-repeat center/cover ;
+}
+.intro button{
+    width:120px;
+    height:30px;
+    background-color:#F78F10;
+    border: solid 1px black;
+    position:relative;
+    top:650px;
+    left:640px;
+}
+.display h1{
+    margin:15px;
+    color:#B36D05;
+    text-align: center;
+    font-size: 40px;
+}
+.description{
+    text-align: center;
+    margin:15px;
+}
+.grid{
+    height:300px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.grid div {
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+.grid div p{
+
 }

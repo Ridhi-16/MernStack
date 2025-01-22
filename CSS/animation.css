@@ -1,0 +1,28 @@
+.img{
+    height:800px;
+    background:url(Images/mountain.png) no-repeat center/cover fixed;
+    background-color:skyblue;
+}
+.sun{
+    height:250px;
+    width:250px;
+    border-radius: 300px;
+    background-color: orange;
+    position:absolute;
+    left:600px;
+    
+    /* top:500px; */
+    /* animation:sun 5s 0s infinite  ;
+    z-index:-100; */
+}
+@keyframes sun{
+    from{
+        transform:translateY(200px);
+       
+
+    }
+    to{
+        transform:translateY(0px);
+        z-index: 100;
+    }
+} 
