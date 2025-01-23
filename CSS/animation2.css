@@ -7,7 +7,6 @@
     height:200px;
     position:absolute;
     top:300px;
-    
     animation:car 15s 0s infinite normal;
     animation-timing-function: linear;
 }
@@ -26,17 +25,35 @@
     justify-content: space-between;
     position:absolute;
     top:390px;
-    left:39px;
+    left:35px;
     animation:wheel 15s 0s infinite normal;
     animation-timing-function: linear;
 }
 @keyframes wheel{
     from{
-        transform:rotateX(0 deg);
+        transform:translate(0px);
     
     }
     to{
-        transform:rotateX(30deg); 
-        left:1035px;
+        transform:translate(1000px); 
+    }
+}
+.left-wheel img{
+    
+    animation:wheels 15s 0s infinite normal;
+    animation-timing-function: linear;
+}
+.right-wheel img{
+    animation:wheels 15s 0s infinite normal;
+    animation-timing-function: linear;
+}
+
+@keyframes wheels{
+    from{
+        transform:rotate(0deg);
+    
+    }
+    to{
+        transform:rotate(3600deg); 
     }
 }

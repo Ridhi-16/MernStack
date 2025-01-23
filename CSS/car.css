@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 .car{
-
     height:80px;
     width:150px;
     color:yellow;
@@ -13,7 +12,7 @@
     border-top-left-radius: 100px;
     position:absolute;
     top:300px;
-    animation:car 50s 0s infinite normal;
+    animation:car 15s 0s infinite normal;
     animation-timing-function: linear;
 }
 @keyframes car{
@@ -44,25 +43,23 @@
     background-color: rgb(230, 220, 220);
 }
 .wheels{
-    
     height:50px;
     width:130px; 
     display:flex;
     justify-content: space-between;
     position:absolute;
     top:60px;
-    left:0px;
-    animation:wheel 50s 0s infinite normal;
+    animation:wheel 15s 0s infinite normal;
     animation-timing-function: linear;
 }
 @keyframes wheel{
     from{
-        transform:rotateX(0 deg);
+        transform:translate(0px);
     
     }
     to{
-        transform:rotateX(30deg); 
-        left:1000px;
+        transform:rotateX(1000px); 
+        
     }
 }
 .left-wheel{
@@ -70,10 +67,23 @@
     width:50px;
     border-radius: 30px;
     background-color: black;
+    animation:wheels 15s 0s infinite normal;
+    animation-timing-function: linear;
 }
 .right-wheel{
     height:50px;
     width:50px;
     border-radius: 30px;
     background-color: black;
+    animation:wheels 15s 0s infinite normal;
+    animation-timing-function: linear;
+}
+@keyframes wheels{
+    from{
+        transform:rotate(0deg);
+    
+    }
+    to{
+        transform:rotate(3600deg); 
+    }
 }
