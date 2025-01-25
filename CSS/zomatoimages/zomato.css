@@ -16,6 +16,7 @@ header{
     left:30px;
     color:azure;
 }
+
 .nav ul li a{
     font-size: 18px;
     text-decoration: none;
@@ -108,7 +109,11 @@ header{
     border-radius:20px;
     overflow: hidden;
 }
-.grid div h5,p{
+.grid div h5 {
     padding-left:20px;
     padding-top:10px;
+}
+
+.display {
+    padding:100px 50px;
 }
