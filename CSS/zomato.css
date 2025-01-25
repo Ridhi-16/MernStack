@@ -17,13 +17,13 @@ header{
     color:azure;
 }
 .nav ul li a{
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
     color:rgb(255, 253, 253);
 }
 .nav ul li{
     list-style: none;
-    padding-right:2rem
+    padding-right:3rem
 }
 .nav ul{
     display:flex;
@@ -35,13 +35,13 @@ header{
 }
 .content h1{
     color:white;
-    margin:20px;
+    margin:40px;
 }
 .searchbox{
     margin-left:25%;
     display:flex;
     height:60px;
-    width:777px;
+    width:770px;
     border-radius:10px;
     background-color:#ffffff;
     justify-content: space-between;
@@ -96,5 +96,19 @@ header{
     border:none;
 }
 .grid{
-    
+    display:flex;
+   justify-content:space-around;
+   padding:50px;
+}
+.grid .item1,.item2  {
+    height:250px;
+    width:505px;
+    background-color:white;
+    border:solid whitesmoke;
+    border-radius:20px;
+    overflow: hidden;
+}
+.grid div h5,p{
+    padding-left:20px;
+    padding-top:10px;
 }
