@@ -111,10 +111,10 @@ header{
     text-align: left;
     font-size: 20px;
 }
-/* .grid div h5 {
+.grid div h5,p{
     padding-left:20px;
     padding-top:10px;
-} */
+}
 
 .display {
     padding:100px 50px;
