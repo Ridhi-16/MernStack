@@ -6,7 +6,7 @@
 .image{
     height:500px;
     width:100vw;
-    background:url(Images/zomatos.png) no-repeat center/cover;
+    background:url(Images/zomatoimg.avif.jpg) no-repeat center/cover;
 }
 header{
     width:100vw;
@@ -102,17 +102,19 @@ header{
    padding:50px;
 }
 .grid .item1,.item2  {
-    height:250px;
-    width:505px;
+    height:200px;
+    width:400px;
     background-color:white;
     border:solid whitesmoke;
     border-radius:20px;
     overflow: hidden;
+    text-align: left;
+    font-size: 20px;
 }
-.grid div h5 {
+/* .grid div h5 {
     padding-left:20px;
     padding-top:10px;
-}
+} */
 
 .display {
     padding:100px 50px;
