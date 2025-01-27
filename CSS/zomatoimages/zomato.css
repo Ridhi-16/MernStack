@@ -10,11 +10,16 @@
 }
 header{
     width:100vw;
-    padding:20px;
+    padding:10px;
     justify-content: space-between;
     position:fixed;
     left:30px;
-    color:azure;
+    
+}
+header a{
+    padding-top: 10px;
+    text-decoration: none;
+    color:white
 }
 
 .nav ul li a{
@@ -24,7 +29,7 @@ header{
 }
 .nav ul li{
     list-style: none;
-    padding-right:3rem
+    padding-right:2rem
 }
 .nav ul{
     display:flex;
@@ -39,7 +44,7 @@ header{
     margin:40px;
 }
 .searchbox{
-    margin-left:25%;
+    margin-left:200px;
     display:flex;
     height:60px;
     width:770px;
@@ -62,18 +67,20 @@ header{
     font-size:30px;
 }
 .dropdown{
-    margin:7px 13px;
+    margin:5px 13px;
     font-size:16px;
 }
 .dropdown .dropdown-content ul li {
     list-style: none;
+    background-color:white;
+    
 }
 .dropdown .dropdown-content ul li i{
-    color: gray;
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 .dropdown .dropdown-content{
-    width: 20vw;
+    width: 8vw;
     box-shadow: 0px 0px 10px gray;
     padding:3px 0;
     display: none;
@@ -81,12 +88,14 @@ header{
 
 .dropdown:hover .dropdown-content{
     display: block;
+    background-color:white;
+    color:black
 }
 .search{
     height:60px;
     width:500px;
     display:flex;
-    justify-content: left;
+    justify-content:left;
     padding:15px;
 }
 .search i{
@@ -97,9 +106,11 @@ header{
     border:none;
 }
 .grid{
+    width:100vw;
     display:flex;
-   justify-content:space-around;
-   padding:50px;
+    justify-content:space-around;
+    padding-top:30px;
+    overflow: hidden;
 }
 .grid .item1,.item2  {
     height:200px;
@@ -116,6 +127,25 @@ header{
     padding-top:10px;
 }
 
-.display {
-    padding:100px 50px;
+@media screen and(max-width:500px) {
+    .dropdown-content{
+        word-wrap: normal;
+    }
+    .grid div{
+        flex-wrap: wrap;
+    }
+    .content{
+        flex-wrap: wrap;
+    }
+}
+@media screen and(min-width:500px) {
+    .dropdown-content{
+        flex-wrap: wrap;
+    }
+    .grid div{
+        flex-wrap: wrap;
+    }
+    .content{
+        flex-wrap: wrap;
+    }
 }
