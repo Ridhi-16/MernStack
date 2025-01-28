@@ -10,7 +10,7 @@
 }
 header{
     width:100vw;
-    padding:10px;
+    padding-top:10px;
     justify-content: space-between;
     position:fixed;
     left:30px;
@@ -35,34 +35,33 @@ header a{
     display:flex;
     justify-content:end;
 }
-.content{
-    text-align:center;
-    padding:100px;   
+.content img{
+    margin:5% 0% 2% 30% ;
 }
 .content h1{
-    color:white;
-    margin:40px;
+    text-align: center;
+    margin:0% 0% 5% 0% ;
 }
 .searchbox{
     display:flex;
-    height:10vh; 
+    height:7vh; 
     width:50vw;
     border-radius:10px;
-    background-color:#ffffff;
-    justify-content: center;
-    text-align: center;
-    margin: auto;
+    background-color:white;
+    justify-content: left;
+    margin: 25%;
 }
 .locator{
     display:flex;
-    justify-content: space-evenly;
-    padding: 15px;
+    justify-content:left;
+    padding: 1% 0% 0% 0%;
+
 }
 .locator input{
     border:none;
 }
 .location{
-    font-size:30px;
+    font-size:2vw;
 }
 .dropdown{
     margin:5px 13px;
@@ -82,7 +81,6 @@ header a{
     padding:3vp 0;
     display: none;
 }
-
 .dropdown:hover .dropdown-content{
     display: block;
     background-color:white;
@@ -91,16 +89,15 @@ header a{
 .search{
     display:flex;
     justify-content:left;
-    padding:15vp;
+    padding: 1% 0% 0% 0%;
 }
 .search i{
-    font-size:40px;
+    font-size:2vw;
 }
 .search input{
     border:none;
 }
 .grid{
-    width:100vw;
     display:flex;
     justify-content:space-around;
     padding-top:30px;
@@ -108,7 +105,6 @@ header a{
 }
 .grid .item1,.item2  {
     height:200px;
-    width:400px;
     background-color:white;
     border:solid whitesmoke;
     border-radius:20px;
@@ -121,7 +117,7 @@ header a{
     padding-top:10px;
 }
 
-@media screen and(max-width:392px) {
+@media screen and(max-width:500px) {
     .dropdown-content{
         word-wrap: normal;
     }
@@ -129,9 +125,11 @@ header a{
         flex-wrap: wrap;
     }
     .searchbox{
-        /* width:15vw;
-        margin:2vw; */
+        flex-wrap: wrap;
+        display:none
     }
+
+    
 }
 @media screen and(min-width:392px) {
     .dropdown-content{
@@ -140,12 +138,10 @@ header a{
     .grid div{
         flex-wrap: wrap;
     }
-    .content{
-        flex-wrap: wrap;
-    }
     .searchbox{
-        
-        /* width:15vw; */
-        /* margin:2vw; */
+        flex-wrap: wrap;
+        display:none;
     }
+   
+
 }
