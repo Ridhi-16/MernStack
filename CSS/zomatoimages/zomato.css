@@ -36,29 +36,31 @@ header a{
     justify-content:end;
 }
 .content img{
-    margin:5% 0% 2% 30% ;
+    margin:10% 0% 5% 30% ;
 }
 .content h1{
+    color:white;
     text-align: center;
     margin:0% 0% 5% 0% ;
 }
 .searchbox{
     display:flex;
     height:7vh; 
-    width:50vw;
+    width:40vw;
     border-radius:10px;
     background-color:white;
     justify-content: left;
-    margin: 25%;
+    margin-left: 25%;
 }
 .locator{
     display:flex;
     justify-content:left;
-    padding: 1% 0% 0% 0%;
+    padding: 1% 0% 0% 1%;
 
 }
 .locator input{
     border:none;
+    width:8vw;
 }
 .location{
     font-size:2vw;
@@ -96,6 +98,8 @@ header a{
 }
 .search input{
     border:none;
+    width:19vw;
+
 }
 .grid{
     display:flex;
@@ -117,7 +121,7 @@ header a{
     padding-top:10px;
 }
 
-@media screen and(max-width:500px) {
+/* @media screen and(max-width:500px) {
     .dropdown-content{
         word-wrap: normal;
     }
@@ -125,13 +129,14 @@ header a{
         flex-wrap: wrap;
     }
     .searchbox{
-        flex-wrap: wrap;
-        display:none
+        width:15vw;
+        margin-left:0vw;
     }
-
-    
-}
-@media screen and(min-width:392px) {
+    .search input{
+        width:2vw;
+    }
+} */
+@media screen and(max-width:500px) {
     .dropdown-content{
         flex-wrap: wrap;
     }
@@ -139,9 +144,18 @@ header a{
         flex-wrap: wrap;
     }
     .searchbox{
-        flex-wrap: wrap;
-        display:none;
+        width:15vw;
+        margin-left:0;
+        display:flex;
+        justify-content: left;
     }
-   
+    .locator input{
+        width:2vw;
+        display:flex;
+        justify-content: left;
 
+    }
+    .search input{
+        width:2vw;
+    }
 }
