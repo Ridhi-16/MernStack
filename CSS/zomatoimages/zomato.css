@@ -136,7 +136,7 @@ header a{
         width:2vw;
     }
 } */
-@media screen and(max-width:500px) {
+@media screen and (max-width:500px) {
     .dropdown-content{
         flex-wrap: wrap;
     }
@@ -146,8 +146,7 @@ header a{
     .searchbox{
         width:15vw;
         margin-left:0;
-        display:flex;
-        justify-content: left;
+        background-color: red;
     }
     .locator input{
         width:2vw;
