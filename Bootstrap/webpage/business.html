@@ -9,32 +9,36 @@
         body{
             background:url(images/bg.jpg) center/cover fixed;
         }
+        .opacity{
+          background-color: rgba(255, 255, 255,0.9);
+
+        }
     </style>
 </head>
 <body>
-    <section> 
+    <header>                                                              <!--header start-->
         <p class="text-center text-light fs-3">Business Casual<p>
         <p class="text-center text-light">Awaken. Indulge. Savor. Escape. Bliss.</p>
-    </section>
-    <nav>
-        <ul class="nav justify-content-center bg-light">
-            <li class="nav-item">
-              <a class="nav-link active text-secondary" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-secondary" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-secondary" href="#">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-secondary">Contact</a>
-            </li>
-          </ul>
-    </nav>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-sm-6 my-3 border-4 text-center bg-light pb-3">
+        <nav>
+          <ul class="nav justify-content-center bg-light">
+              <li class="nav-item">
+                <a class="nav-link active text-secondary" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary">Contact</a>
+              </li>
+            </ul>
+        </nav>
+    </header>                                                             <!--header end-->
+    <div class="container">                                               <!--container start-->
+        <div class="row justify-content-center">                          <!-- introduction start-->
+            <div class="col-md-6 my-3 border-4 text-center  opacity pb-3">
                 <div class="card mt-3 " >
                     <img src="images/slide-2.jpg" class="card-img-top image-fluid"  alt="...">
                   </div>
@@ -42,22 +46,22 @@
                 <h3 class="my-3">Business Casual</h3>
                 <span class=" border-top border-dark p-2">BY START BOOTSRAP </span>
             </div>
-        </div>
+        </div>                                                            <!--header start-->
         <div class="row justify-content-center">
-          <div class="col-sm-6 my-3 border-4 text-center bg-light p-3">
+          <div class="col-md-6 my-3 border-4 text-center opacity p-3">
             <span class="d-inline-block border-top border-bottom fw-bold">
               <p class="mt-3">"Where coffee meets comfort and conversation."</p>
             </span>
             <div class=" text-start my-3 ">
-              <img src="images/intro-pic.jpg" class="img-fluid w-25  me-2 float-start" alt="...">
-              <p class="">A coffee shop is more than just a place to grab a drink; it’s a sanctuary for moments of pause and connection. The rich aroma of freshly brewed coffee blends with the hum of quiet conversations and the clink of cups. It’s a cozy, inviting space where creativity thrives, friendships are built, and ideas flow. Whether you're sipping a latte while reading or catching up with friends, every corner offers warmth, comfort, and a sense of belonging. It’s a community hub, offering not just coffee but a welcoming atmosphere that brings people together.</p>
+              <img src="images/intro-pic.jpg" class="img-fluid  w-25 float-md-start d-block me-md-2 mx-auto" alt="error">
+              <p class="ms-2">A coffee shop is more than just a place to grab a drink; it’s a sanctuary for moments of pause and connection. The rich aroma of freshly brewed coffee blends with the hum of quiet conversations and the clink of cups. It’s a cozy, inviting space where creativity thrives, friendships are built, and ideas flow. Whether you're sipping a latte while reading or catching up with friends, every corner offers warmth, comfort, and a sense of belonging. It’s a community hub, offering not just coffee but a welcoming atmosphere that brings people together.</p>
             </div>
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-sm-6 my-3 border-4 text-center bg-light p-3">
+          <div class="col-md-6 my-3 border-4 text-center opacity p-3">
             <span class="d-inline-block border-top border-bottom fw-bold">
-              <p class="mt-3">"Where coffee meets comfort and conversation."</p>
+              <p class="mt-3">"Cozy vibes, fresh brews daily."</p>
             </span>
             <div class="my-3 text-justify">
               A coffee shop is a warm, inviting space where the rich aroma of freshly brewed coffee fills the air. It’s a place for relaxation, productivity, or meaningful conversations. Whether you’re grabbing a quick espresso or lounging with friends, the atmosphere is always cozy, vibrant, and full of energy.
@@ -65,7 +69,7 @@
           </div>
         </div> 
         
-    </div>
+    </div>                                                                <!--container end-->
 
     <div class="footer text-center bg-light my-5 bg-light p-3">Copyright &copy Coffee Website</div>
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
