@@ -1,0 +1,18 @@
+body{
+    background: url("images/bg.jpg") no-repeat center/cover fixed;
+}
+.anim{
+  
+   margin-left: 1300px;
+    animation: demo 3s forwards;
+   
+}
+@keyframes demo {
+    from{
+       margin-left: 1300px;
+    }
+    
+    to{
+        margin-left: 0px;
+    }
+}
