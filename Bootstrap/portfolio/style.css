@@ -1,0 +1,57 @@
+body{
+    background: url(images/19852263_6191107.jpg) no-repeat center/cover fixed;
+}
+header nav{
+    background-color:rgba(128, 128, 128, 0)
+}
+
+.links ul li a{
+    color:#fbc970;
+    font-weight: bold;
+}
+
+.fleur-de-leah-regular {
+        font-family: "Fleur De Leah", serif;
+        font-weight: 400;
+        font-style: normal;
+}
+.rouge-script-regular {
+    font-family: "Rouge Script", serif;
+    font-weight: 500;
+    font-style: normal;
+    color:azure;
+    font-size:2rem;
+    text-align: center;
+    text-wrap: wrap;
+
+}
+.content{
+    border:#fbc940 solid 5px;
+}
+.content{
+    margin-top:100px;
+    /* animation: intro 3s linear forwards; */
+    z-index: -1;
+}
+@keyframes intro{
+    from{
+        margin-top:100px;
+        z-index:-1
+    }
+    to{
+        margin-top:0px;
+    }
+}
+.animation{
+    margin-right:2000px;
+    animation: girl 3s linear forwards ;
+}
+@keyframes girl{
+    from{
+        margin-right:2000px;
+    }
+    to{
+        margin-right:-10px;
+    }
+}
+  
