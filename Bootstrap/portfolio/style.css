@@ -1,5 +1,5 @@
 body{
-    background: url(images/19852263_6191107.jpg) no-repeat center/cover fixed;
+    background: url(images/v882-kul-55.jpg) no-repeat center/cover fixed;
 }
 header nav{
     background-color:rgba(128, 128, 128, 0)
@@ -17,18 +17,19 @@ header nav{
 }
 .rouge-script-regular {
     font-family: "Rouge Script", serif;
-    font-weight: 500;
+    font-weight: 700;
     font-style: normal;
     color:azure;
-    font-size:2rem;
+    font-size:2.2rem;
     text-align: center;
     text-wrap: wrap;
+    word-spacing: 1rem;
 
 }
-.content{
+/* .content{
     border:#fbc940 solid 5px;
 }
-/* .content{
+.content{
     margin-left:1500px;
     animation: intro 3s linear forwards;
    
@@ -53,15 +54,25 @@ header nav{
     to{
         margin-right:-10px;
     }
-} */
-  
+}
+   */
 
 .headings{
     font-size:5rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color:#fbc940
+    color:#fbc940;
 
 }
 .color{
     background-color:#f8ce5a;
+    box-shadow: 10px 10px 5px rgb(255, 255, 255);
 }
+.projects{
+    background-color: #ffffff;
+    color:#fbc940;
+    font-weight: bolder;
+}
+.shadows{
+    box-shadow: 0px 0px 15px #f8ce5a;
+}
+
