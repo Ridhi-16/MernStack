@@ -28,21 +28,21 @@ header nav{
 .content{
     border:#fbc940 solid 5px;
 }
-.content{
-    margin-top:100px;
-    /* animation: intro 3s linear forwards; */
-    z-index: -1;
+/* .content{
+    margin-left:1500px;
+    animation: intro 3s linear forwards;
+   
 }
 @keyframes intro{
     from{
-        margin-top:100px;
-        z-index:-1
+        margin-left:1500px;
+        
     }
     to{
-        margin-top:0px;
+        margin-left:0px;
     }
-}
-.animation{
+} */
+/* .animation{
     margin-right:2000px;
     animation: girl 3s linear forwards ;
 }
@@ -53,5 +53,15 @@ header nav{
     to{
         margin-right:-10px;
     }
-}
+} */
   
+
+.headings{
+    font-size:5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:#fbc940
+
+}
+.color{
+    background-color:#f8ce5a;
+}
