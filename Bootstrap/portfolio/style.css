@@ -43,7 +43,7 @@ header nav{
         margin-left:0px;
     }
 } */
-/* .animation{
+.animation{
     margin-right:2000px;
     animation: girl 3s linear forwards ;
 }
@@ -55,7 +55,7 @@ header nav{
         margin-right:-10px;
     }
 }
-   */
+  
 
 .headings{
     font-size:5rem;
@@ -76,3 +76,6 @@ header nav{
     box-shadow: 0px 0px 15px #f8ce5a;
 }
 
+header .nav ul li a:hover{
+    color:white
+}

@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    height: 70vh;
+    background:url("images/zomatoimg.avif") no-repeat center/cover;
+    width: 100vw;
+}
+.header nav a{
+    text-decoration: none;
+    color:white
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 16px 0;
+    font-size: 20px;
+}
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+nav ul li{
+    list-style: none;
+}
+.menu-icon{
+    color: white;
+    display: none;
+}
+.inner-banner{
+    height: 50vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.inner-banner img{
+    display: block;
+    margin:32px auto;
+    width: 30%;
+}
+.inner-banner h1{
+    color: white;
+    font-weight: lighter;
+    text-align: center;
+}
+.inner-banner .search-box{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin:12px 0;
+    width: 70%;
+}
+.inner-banner .search-box input{
+    padding: 12px 12px;
+    border: none;
+    border-top-right-radius:4px ;
+    border-bottom-right-radius:4px ;
+    width: 70%;
+}
+.inner-banner .search-box select{
+    padding: 12px 12px;
+    
+    border:none;
+    border-top-left-radius:4px ;
+    border-bottom-left-radius:4px ;
+   
+}
+.inner-banner .search-box div{
+    color:gray;
+    background-color: white;;
+    padding: 12px 12px;
+   
+    font-size: 24px;
+    
+}
+.inner-banner .search-box input::placeholder{
+    font-size: 16px;
+}
+
+.about-section{
+    display: flex;
+    margin: 12px 0;
+    justify-content: space-around;
+}
+
+.card{
+    border: 1px gray solid;
+    border-radius: 4px;
+    height: 300px;
+    width: 500px;
+}
+
+@media  screen and (max-width:576px) {
+    .menu-icon{
+        display: block;
+    }
+    nav ul{
+        display: none;
+    }
+    nav{
+        padding:16px 8px;
+        justify-content: space-between;
+    }
+    .inner-banner img{
+        width: 80%;
+    }
+    .inner-banner .search-box {
+        width: 100%;
+    }
+    .inner-banner .search-box div{
+        display: none;
+    }
+    .inner-banner .search-box{
+       flex-direction: column;
+       /* justify-content: center; */
+    }
+    .inner-banner .search-box select, .inner-banner .search-box input{
+        width: 100%;
+        border-radius: 4px;
+    }
+   
+    .about-section{
+        display: block;
+        /* flex-wrap: wrap; */
+    }
+    
+}
