@@ -15,7 +15,6 @@
   <header class="py-3 ">                            <!--header starts-->
     <nav class="navbar navbar-expand-lg shadow p-3 mb-5 rounded  nav ">
       <div class="container-fluid">
-        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -40,14 +39,18 @@
     </nav>
   </header>                                         <!--header ends-->
   <div class="main mb-3">                           <!--main home starts-->
-    <div class="anim d-flex">
-      <div class="animation w-25 h-50">
-        <img src="images/31624432_7358389.png" class="img-fluid w-100 h-100 ms-3" alt="">
+    <div class="anim d-flex ">
+      <div class="animation h-25">
+        <img src="images/smiley-3d-woman-saluting.png" class="img-fluid  " alt="">
       </div>
-      <div class="content rouge-script-regular w-50 p-3">
-        <p> "Welcome to my portfolio! I am <mark>Ridhi.</mark>I am passionate about creating webpages and learning MERN. With a keen eye for detail and a drive to push creative boundaries. I aim to deliver exceptional work that not only meets but exceeds expectations. Here, you'll find a collection of my projects that showcase my skills, dedication, and unique approach to problem-solving.I hope my work resonates with you and demonstrates my commitment to quality and innovation."
-          Feel free to tweak it based on your specific field or personal style!
-        </p>
+      <div class="content w-50 mt-5 p-3">
+        <p class="text-light"> "Hey! I am <mark>Ridhi."</mark></p>
+        <h1>FRONTENED DEVELOPER</h1>
+        <p class="text-light">I'm a passionate web developer skilled in creating responsive, user-friendly websites. I specialize in front-end and back-end technologies to build seamless digital experiences.</p>
+        <button type="button" class="btn me-5 btn-outline-light button">contact</button>
+        <button type="button" class="btn  btn-outline-light button">Hire Me</button>
+
+        
       </div>
     </div>
   </div>                                            <!--main home ends-->
@@ -57,24 +60,18 @@
       <div class="row">
         <div id="skills" class="col headings mb-5">SKILLS</div>
       </div>
-      <div class="row justify-content-between ">
-        <div class="col-3 ">
-          <div class="card p-2  color ">
-            <img src="images/java.png" class="card-img-top img-fluid h-50" alt="...">
-            <div class="card-body text-center ">JAVA</div>
+      <div class="row d-flex justify-content-around">
+        <div class="col-sm ">
+          <div class=" text-center p-4 java-img rounded-5">
+            <i class="fa-brands fa-java "></i>
+            <p>Java</p>
           </div>
         </div>
-        <div class="col-3  ">
-          <div class="card p-2   color ">
-            <img src="images/dsa.jpg" class="card-img-top img-fluid h-50" alt="...">
-            <div class="card-body text-center ">DSA</div>
-          </div>
+        <div class="col-sm  ">
+           <div class="dsa-img rounded-5"></div>
         </div>
-        <div class="col-3">
-          <div class="card p-2   color ">
-            <img src="images/MERN Stack Development.jpeg" class="card-img-top img-fluid h-50" alt="...">
-            <div class="card-body text-center ">MERN</div>
-          </div>
+        <div class="col-sm">
+          <div class="js-img rounded-5"></div>
         </div>
       </div>
     </div>
@@ -82,68 +79,40 @@
   <div class="py-5 my-5">                           <!--projects section start-->
     <div class="container-fluid">                       <!--project-starting-->
       <div class="row">                                 <!--project-heading--> 
-        <div class="col-8 p-3 projects text-center"><h1 id="projects">Projects</h1></div>
+        <div class="col p-3 projects text-center"><h1 id="projects">Projects</h1></div>
       </div>                                            <!--project-heading-ends-->
-      <div class="row mt-5 justify-content-evenly ">    <!--project1 starts--> 
-        <div class="col-10 color py-4 px-4">
-          <div class="card mb-3 bg-dark" >
-            <div class="row g-2 my-3">
-              <div class="col-md-5  p-4 ">
-                <a href="../../CSS/jewellery/jewellery.html" target="_blank"><img src="images/home-2-hotspot-img1.jpg" alt="" class="img-fluid border  border-5 shadows h-100 w-100 "></a>
-              </div>
-              <div class="col-md-7">
-                <div class="card-body">
-                  <h5 class="card-title text-light text-center">Jewellery website</h5>
-                  <p class="card-text text-light my-5 text-center">"Discover timeless elegance with our exclusive collection of handcrafted jewelry."  
-                    "Elevate your style with exquisite designs that capture beauty and grace."</p>
-                  <p class="card-text text-light text-center "><small class="">click on the image to view the site</small></p>
-                </div>
-              </div>
+      <div class="row mt-5 justify-content-evenly ">    <!--project 1-row starts--> 
+        <div class="col-3  py-4 px-4">
+          <div class="card">
+            <a href="../../CSS/jewellery/jewellery.html"><img src="images/home-2-hotspot-img1.jpg"class="img-fluid border shadows image " alt=""></a>
+            <div class="card-body p-0">
+              <h5 class="card-title text-center">Jewellery website</h5>
             </div>
-        </div>     
-        </div>                    <!--col-ends-->
-      </div>                                            <!--project1-row ends-->
-      <div class="row mt-5 justify-content-evenly ">    <!--project2-row starts--> 
-        <div class="col-10 color p-4  ">
-          <div class="card mb-3 bg-dark" >
-            <div class="row g-2 mt-3 mb-0 ">
-              <div class="col-md-5  px-4  pt-4 mb-0">
-                <a href="../../CSS/zomatoimages/zomato.html" target="_blank"><img src="images/Zomato_logo.png" alt="" class="img-fluid border shadows w-100 h-75"></a>
-              </div>
-              <div class="col-md-7">
-                <div class="card-body">
-                  <h5 class="card-title text-light text-center">Zomato clone</h5>
-                  <p class="card-text text-light my-5 text-center">"Indulge in deliciousness with Zomato – your go-to app for food delivery and restaurant discovery."  
-                    "Explore the best local flavors, right at your doorstep with just a tap."</p>
-                  <p class="card-text text-light text-center "><small class="">click on the image to view the site</small></p>
-                </div>
-              </div>
+          </div>     
+        </div>
+        <div class="col-3  py-4 px-4">
+          <div class="card">
+            <a href="../../CSS/zomatoimages/zomato.html" target="_blank"><img src="images/Zomato_logo.png " alt="" class="img-fluid border shadows image "></a>
+            <div class="card-body p-0">
+              <h5 class="card-title text-center"> Zomato Clone</h5>
             </div>
-        </div>     
-        </div>                    <!--col-ends-->
-      </div>                                            <!--project2-row ends-->
-      <div class="row mt-5 justify-content-evenly ">    <!--project3-row starts--> 
-        <div class="col-10 color py-4 px-4">
-          <div class="card mb-3 bg-dark" >
-            <div class="row g-2 my-3">
-              <div class="col-md-5  p-4 ">
-                <a href="../webpage/business.html" target="_blank"><img src="images/slide-2.jpg" alt="" class="img-fluid border shadows w-100 h-100"></a>
-              </div>
-              <div class="col-md-7">
-                <div class="card-body">
-                  <h5 class="card-title text-light text-center">Business website</h5>
-                  <p class="card-text text-light my-5 text-center">"Awaken your senses with our premium, freshly brewed coffee selections."  
-                    "Experience the perfect blend of flavor and aroma in every cup."</p>
-                  <p class="card-text text-light text-center "><small class="">click on the image to view the site</small></p>
-                </div>
-              </div>
+          </div>     
+        </div>
+        <div class="col-3  py-4 px-4">
+          <div class="card ">
+            <a href="../webpage/business.html" target="_blank"><img src="images/slide-2.jpg" alt="" class="img-fluid border shadows image "></a>
+            <div class="card-body p-0">
+              <h5 class="card-title text-center">Business Casual</h5>
             </div>
-        </div>     
+          </div>     
         </div>                    <!--col-ends-->
-      </div>                                            <!--project3-row-ends-->
+      </div>                                       
     </div>                                              <!--project-ending-->
-  </div>                                            <!--projects section start-->
+  </div>                                            <!--projects section end-->
   <div class="container-fluid contact ">            <!--contact section start-->
+    <div class="row p-0">
+      <div class="col text-center text-light"><h1>CONTACT </h1></div>
+    </div>
     <div class="row py-5">
       <div class="col bg-light my-5  p-5">
         <h2 id="contact">Let's get in touch</h2>
