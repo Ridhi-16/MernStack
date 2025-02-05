@@ -27,7 +27,7 @@ header nav{
     word-spacing: 1rem;
 }
 .content p{
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 .content h1{
     color:#5E0BDF;
@@ -54,10 +54,10 @@ header nav{
         margin-left:0px;
     }
 }
- .animation{
+.animation{
     width:40vw;
     margin-right:2000px;
-    animation: girl 3s linear forwards ;
+    animation: girl 2s linear forwards ;
 }
 @keyframes girl{
     from{
@@ -70,21 +70,17 @@ header nav{
   
 
 .headings{
-    font-size:2rem;
-    color:#ffffff;
-    text-align: center;
+    font-size:5rem;
+    color:var(--mainbutton);
     font-weight: bolder;
+    text-align: center;
 
 }
 .color{
     background-color:#f8ce5a;
     box-shadow: 10px 10px 5px rgb(255, 255, 255);
 }
-.projects{
-    font-size: 2rem;
-    color:#ffffff;
-    font-weight: bolder;
-}
+
 .shadows{
     box-shadow: 0px 0px 15px #f8ce5a;
 }
@@ -123,5 +119,10 @@ header .nav ul li a:hover{
     width:12.5rem;
     background-image: linear-gradient(rgb(255, 16, 183), rgb(231, 85, 236), rgb(183, 0, 255));
     box-shadow: 0px 0px 5px aquamarine;
+
+}
+.contact{
+    background-color:#d0b3ff;
+    color: var(--mainbutton);
 
 }
