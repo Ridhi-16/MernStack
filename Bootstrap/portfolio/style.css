@@ -38,6 +38,7 @@ header nav{
     --mainbutton:#5E0BDF;
 }
 .button{
+    
     background-color:var(--mainbutton)
 }
 .content{
@@ -125,10 +126,16 @@ header .nav ul li a:hover{
     color: var(--mainbutton);
 
 }
-@media screen and (max-width:586px)
+@media screen and (max-width:768px)
 {
     .headings{
-        font-size: 1rem;
+        font-size: 2rem;
+    }
+    .content h1{
+        font-size: 2.5rem;
+    }
+    .sides{
+        display:none;
     }
     
 }

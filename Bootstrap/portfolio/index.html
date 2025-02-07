@@ -40,8 +40,8 @@
   </header>                                             <!--header ends-->
   <div class="main">
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-1">                             <!--side part link-->
+      <div class="row justify-content-md-start">
+        <div class="col-md-1 sides">                             <!--side part link-->
           <div class=" ms-5 d-flex flex-column text-light justify-content-center">                       
             <div class=" mt-5 ms-2 vr bg-light" style="height: 200px; "></div>
             <div class=" mb-3 mt-2">
@@ -51,25 +51,21 @@
               <i class="fa-brands fa-github fs-3 "></i>
             </div>
           </div>
-        </div>
-        <div class="col-md">
-          <div class="row">
-            <div class="col-md">
-              <div class="animation h-25">
-                <img src="images/smiley-3d-woman-saluting.png" class="img-fluid  " alt="">
-              </div>
-            </div>
-            <div class="col-md">
-              <div class="content w-50 mt-5 p-3">
-                <p class="text-light"> "Hey! I am <mark>Ridhi.</mark></p>
-                <h1>FRONTENED DEVELOPER</h1>
-                <p class="text-light">I'm a passionate web developer skilled in creating responsive, user-friendly websites. I specialize in front-end and back-end technologies to build seamless digital experiences.</p>
-                <button type="button" class="btn btn-outline-light button">Hire Me</button>
-              </div>
-            </div>
+        </div>      
+        <div class="col-lg col-md-3">
+          <div class="animation h-25">
+            <img src="images/smiley-3d-woman-saluting.png" class="img-fluid  " alt="">
           </div>
         </div>
-        <div class="col-md-1">                             <!--side part link-->
+        <div class="col-lg col-md-6">
+          <div class="content  mt-5 p-3 d-md-block mx-auto">
+            <p class="text-light"> "Hey! I am <mark>Ridhi.</mark></p>
+            <h1>FRONTENED DEVELOPER</h1>
+            <p class="text-light">I'm a passionate web developer skilled in creating responsive, user-friendly websites. I specialize in front-end and back-end technologies to build seamless digital experiences.</p>
+            <button type="button" class="btn btn-outline-light button">Hire Me</button>
+          </div>
+        </div>
+        <div class="col-md-1 sides">                             <!--side part link-->
           <div class="mt-5 text-light d-flex flex-column justify-content-center me-5 ">
             <div class="mt-5 mb-3">
               <i class="fa-brands fa-linkedin fs-3  "></i>
@@ -80,7 +76,6 @@
             <div class=" vr bg-light ms-2" style="height: 200px; width: 2px;"></div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -89,21 +84,21 @@
       <div class="row">                             <!-- skills section heading-->
         <div id="skills" class="col   mb-5"><h1 class="headings">SKILLS</h1></div>
       </div>
-      <div class="row justify-content-center  mt-4">    <!-- skills row start-->
-        <div class="col-sm-3  ">                                 <!-- skill 1 start-->
-          <div class="java-img rounded-5 d-block-sm mx-auto text-center p-4">
+      <div class="row justify-content-center  mt-4 ">    <!-- skills row start-->
+        <div class="col-sm-3   ">                                 <!-- skill 1 start-->
+          <div class="java-img rounded-5 d-sm-block mx-auto text-center p-4">
             <i class="fa-brands fa-java "></i>
             <p>Java</p>
           </div>
         </div>
-        <div class="col-sm-3  ">                                <!-- skill 1 start-->
-           <div class="dsa-img rounded-5 text-center p-3 d-block-sm mx-auto">
+        <div class="col-sm-3   ">                                <!-- skill 1 start-->
+           <div class="dsa-img rounded-5 text-center p-3 d-sm-block mx-auto">
             <img src="images/pngegg.png" alt="" class="img-fluid h-75">
             <p>DSA</p>
            </div>
         </div>
-        <div class="col-sm-3">                                  <!-- skill 1 start-->
-          <div class="js-img rounded-5 text-center p-4 d-block-sm mx-auto">
+        <div class="col-sm-3 ">                                  <!-- skill 1 start-->
+          <div class="js-img rounded-5 text-center p-4 d-sm-block  mx-auto">
             <i class="fa-brands fa-js"></i>
             <p>Javascript</p>
           </div>
@@ -119,7 +114,7 @@
       <div class="row mt-5 justify-content-evenly ">    <!--project 1-row starts--> 
         <div class="col-sm-3 py-4 px-4">
           <div class="card contact">
-            <a href="../../CSS/jewellery/jewellery.html"><img src="images/home-2-hotspot-img1.jpg"class="img-fluid border shadows image d-block-sm mx-auto " alt=""></a>
+            <a href="../../CSS/jewellery/jewellery.html"><img src="images/home-2-hotspot-img1.jpg" class=" w-100 img-fluid border shadows image" alt=""></a>
             <div class="card-body pt-2">
               <h5 class="card-title text-center">Jewellery website</h5>
             </div>
@@ -127,7 +122,7 @@
         </div>
         <div class="col-sm-3  py-4 px-4">
           <div class="card contact">
-            <a href="../../CSS/zomatoimages/zomato.html" target="_blank"><img src="images/Zomato_logo.png " alt="" class=" d-block-sm mx-auto img-fluid border shadows image "></a>
+            <a href="../../CSS/zomatoimages/zomato.html" target="_blank"><img src="images/Zomato_logo.png " alt="" class="w-100 img-fluid border shadows image "></a>
             <div class="card-body pt-2">
               <h5 class="card-title text-center"> Zomato Clone</h5>
             </div>
@@ -135,7 +130,7 @@
         </div>
         <div class="col-sm-3  py-4 px-4">
           <div class="card contact">
-            <a href="../webpage/business.html" target="_blank"><img src="images/slide-2.jpg" alt="" class=" d-block-sm mx-auto img-fluid border shadows image "></a>
+            <a href="../webpage/business.html" target="_blank"><img src="images/slide-2.jpg " alt="" class="w-100 img-fluid border shadows image "></a>
             <div class="card-body pt-2">
               <h5 class="card-title text-center contact">Business Casual</h5>
             </div>
