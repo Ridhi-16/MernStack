@@ -42,8 +42,8 @@ header nav{
     background-color:var(--mainbutton)
 }
 .content{
-    /* margin-left:1000px; */
-    /* animation: intro 3s linear forwards; */
+    margin-left:1000px;
+    animation: intro 3s linear forwards;
    
 }
 @keyframes intro{
@@ -56,9 +56,9 @@ header nav{
     }
 }
 .animation{
-    /* width:40vw; */
-    /* margin-right:2000px; */
-    /* animation: girl 2s linear forwards ; */
+    margin-right:2000px; 
+    animation: girl 3s linear forwards ; 
+   
 }
 @keyframes girl{
     from{
@@ -139,3 +139,10 @@ header .nav ul li a:hover{
     }
     
 }
+    
+
+    
+
+
+
+
