@@ -129,7 +129,7 @@ nav ul{
     height:200px;
 }
 .item h5,.item p{
-    padding:3px 5px;
+    padding:3px 8px;
     font-size: 20px;
 }
 
@@ -167,8 +167,20 @@ nav ul{
     .inner-sec .search-box i{
         display: none;
     }
-    .item{
-        display: block;
+    .grid{
+        flex-wrap: wrap;
     }
     
 }
+
+.collections{
+
+}
+
+
+
+
+
+
+
+
