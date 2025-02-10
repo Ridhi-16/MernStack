@@ -170,17 +170,44 @@ nav ul{
     .grid{
         flex-wrap: wrap;
     }
+    .collections{
+        margin:0 0 0 0;
+    }
+    .red-font{
+        margin: 0;
+    }
     
 }
-
-.collections{
-
+/* media query ends */
+.collections {
+    padding: 10px;
+    width:82%;
+    margin: auto;
+}
+.collection-heading{
+    margin-bottom: 10px;
+}
+.coll-para .para{
+    display:inline;
+    float:left;
+}
+.red-font{
+    color:red;
+    float:right;
 }
 
+.gallery{
+    margin-top: 50px;
+    display:flex;
 
-
-
-
-
-
+}
+.gallery div{
+    height: 200;
+    width: 25%;
+    
+}
+.gallery div img{
+    height:300px;
+    width:200px;
+}
 
