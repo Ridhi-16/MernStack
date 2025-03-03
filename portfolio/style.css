@@ -187,12 +187,12 @@ header .nav ul li a:hover{
         display:none;
     }
     .hire{
-        width:100px;
+        width:120px;
 
     }
 }
 @media screen and (max-width:400px){
     .hire{
-        width:100vw;
+        width:80vw;
     }
 }
