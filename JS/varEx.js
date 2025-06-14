@@ -21,9 +21,9 @@ setInterval(() => {
     console.log("hi ")
 }, 2000);
 
-var sum=(a,b)=>{
+// var sum=(a,b)=>{
     
-}
+// }
 
 
 
