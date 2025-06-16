@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="inputs" style="display: flex; justify-content: space-evenly;">
+        <input type="text" id="input1">
+        <input type="text" id="input2">
+    </div>
+    <div class="buttons" style="display: flex; justify-content: space-evenly; margin-top: 50px;">
+        <button id="button1" onclick="getinput()">button1</button>
+        <button id="button2" onclick="getAlerts()">button2</button>
+        <button id="button3" onclick="changeValue()">button3</button>
+        <button id="button4" onclick="concat()">button4</button>
+        <button id="button5" onclick="convert()">button5</button>
+
+    </div>
+    
+    <div class="divs"  style="display: flex; justify-content: space-evenly; margin-top: 50px; " >
+        <div id="left-div" style="background-color: aqua; height: 300px; width: 300px;"> hello</div>
+        <div id="right-div" style="background-color:bisque; height: 300px; width: 300px;"> bye</div>
+    </div>
+
+    <script>
+        let input1=document.getElementById("input1")
+        let input2=document.getElementById("input2")
+        let leftDiv=document.getElementById("left-div").innerHTML
+        let rightDiv=document.getElementById("right-div").innerHTML
+
+
+        function getinput(){
+            input2.value=input1.value
+        }
+        function getAlerts(){
+            alert(input1.value)
+            alert(leftDiv)
+            alert(rightDiv)
+        }
+        function changeValue(){
+            document.getElementById("right-div").innerHTML=input1.value
+        }
+
+        function concat(){
+            document.getElementById("left-div").innerHTML=leftDiv.concat(input1.value).concat(input2.value)
+        }
+        function convert(){
+            input1.type="radio"
+            input2.type="radio"
+            
+            document.getElementById("right-div").style.backgroundImage="url('pic3.jpeg')"
+        }
+    </script>
+</body>
+</html>

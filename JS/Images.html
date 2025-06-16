@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main" style="display: flex; justify-content: center; height: 200px;">
+        <img src="pic3.jpeg" id="image">
+    </div>
+
+    <div class="down" style="display: flex; justify-content: space-between; margin-top:50px; margin-left: 50px; margin-right: 50px;  " >
+        <img src="pic1.jpeg" id="img1"  onmouseover="changeImage('pic1.jpeg')" onmouseout="changeImage('pic3.jpeg')">
+        <img src="pic2.jpeg" id="img2" onmouseover="changeImage('pic2.jpeg')" onmouseout="changeImage('pic3.jpeg')">
+        <img src="pic4.jpeg" id="img3" onmouseover="changeImage('pic4.jpeg')" onmouseout="changeImage('pic3.jpeg')">
+    </div>
+    
+    <script>
+        function changeImage(x){
+            document.getElementById("image").src=x
+        }
+    </script>
+</body>
+</html>
