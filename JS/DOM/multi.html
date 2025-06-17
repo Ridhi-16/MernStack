@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="inputs" style="display: flex; justify-content: space-around; padding:50px; border: 5px solid black; background-color: crimson;">
+       <label for="">INPUTS</label>
+        <input type="text" id="input1" placeholder="Input 1">
+        <input type="text" id="input2" placeholder="Input 2" style="margin-right: 200px;">
+    </div>
+    <div class="buttons" style="display: flex; justify-content: space-evenly; border: 5px solid black ; padding:50px; background-color:rgb(115, 115, 228)">
+        <label for="">BUTTON</label>
+        <button id="button1" onclick="getinput()"   style="border-radius: 5px; color:blueviolet;   padding:5px">BUTTON 1</button>
+        <button id="button2" onclick="getAlerts()"   style="border-radius: 5px; color:blueviolet;   padding:5px">BUTTON 2</button>
+        <button id="button3" onclick="changeValue()"   style="border-radius: 5px; color:blueviolet;   padding:5px">BUTTON 3</button>
+        <button id="button4" onclick="concat()"   style="border-radius: 5px; color:blueviolet;   padding:5px">BUTTON 4</button>
+        <button id="button5" onclick="convert()"   style="border-radius: 5px; color:blueviolet;   padding:5px">BUTTON 5</button>
+
+    </div>
+    
+    <div class="divs"  style="display: flex; justify-content: space-evenly; border: 5px solid black ; padding:50px; background-color:rgb(216, 137, 255); " >
+        <label for="">DIVS</label>
+        <div id="left-div" style="background-color: aqua; height: 150px; width: 300px;"> hello</div>
+        <div id="right-div" style="background-color:bisque; height: 150px; width: 300px;"> bye</div>
+    </div>
+
+    <script>
+        let input1=document.getElementById("input1")
+        let input2=document.getElementById("input2")
+        let leftDiv=document.getElementById("left-div").innerHTML
+        let rightDiv=document.getElementById("right-div").innerHTML
+
+
+        function getinput(){
+            input2.value=input1.value
+        }
+        function getAlerts(){
+            alert(input1.value)
+            alert(leftDiv)
+            alert(rightDiv)
+        }
+        function changeValue(){
+            document.getElementById("right-div").innerHTML=input1.value
+        }
+
+        function concat(){
+            document.getElementById("left-div").innerHTML=leftDiv.concat(input1.value).concat(input2.value)
+        }
+        function convert(){
+            input1.type="radio"
+            input2.type="radio"
+            document.getElementById("right-div").style.backgroundImage="url('pic3.jpeg')"
+        }
+    </script>
+</body>
+</html>

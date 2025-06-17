@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label >height</label>&nbsp;&nbsp;&nbsp;<input id="height">
+    <br>
+    <label >width</label>&nbsp&nbsp;&nbsp;<input id="width">
+     <br>
+    <label >text</label>&nbsp;&nbsp;&nbsp;<input id="text">
+     <br>
+    <label >color</label>&nbsp;&nbsp;&nbsp; <input id="color">
+     <br>
+    <label >bgcolor</label>&nbsp;&nbsp;&nbsp;<input id="bgcolor">
+    <br>
+     <br>
+    <button onclick="createDiv()"> assign</button>
+    <br><br>
+    <h1 id="heading"></h1>
+    <div id="box"></div>
+    <script>
+        function createDiv(){
+            
+            let iheight=document.getElementById("height").value
+            let iwidth=document.getElementById("width").value
+            let itext=document.getElementById("text").value
+            let icolor=document.getElementById("color").value
+            let ibgcolor=document.getElementById("bgcolor").value  
+
+            document.getElementById("heading").innerHTML="creating a div"
+            let box=document.getElementById("box").style
+            document.getElementById("box").innerHTML=itext
+            box.height=iheight
+            box.width=iwidth
+            box.color=icolor
+            box.backgroundColor=ibgcolor
+        }
+    </script>
+    
+</body>
+</html>
