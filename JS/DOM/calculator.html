@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="">Number 1</label>
+    <input id="input1">
+    <br>
+    <label for="">Number 2</label>
+    <input id="input2">
+    <br>
+    <label for="">SUM </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="sum">
+    <script>
+        var a=prompt("enter a no")
+        let no1=parseInt(a)
+        var b=prompt("enter a no")
+        let no2=parseInt(b)
+        console.log(no1+no2)
+        document.getElementById("input1").value=no1
+        document.getElementById("input2").value=no2
+        document.getElementById("sum").value=no1+no2
+    </script>
+</body>
+</html>

@@ -6,8 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="main" style="display: flex; justify-content: center; height: 200px;">
-        <img src="pic3.jpeg" id="image">
+    <div class="main" >
+        <img src="pic3.jpeg" id="image" style="display:block; margin:0px auto; height: 200px;">
     </div>
 
     <div class="down" style="display: flex; justify-content: space-between; margin-top:50px; margin-left: 50px; margin-right: 50px;  " >
@@ -15,7 +15,6 @@
         <img src="pic2.jpeg" id="img2" onmouseover="changeImage('pic2.jpeg')" onmouseout="changeImage('pic3.jpeg')">
         <img src="pic4.jpeg" id="img3" onmouseover="changeImage('pic4.jpeg')" onmouseout="changeImage('pic3.jpeg')">
     </div>
-    
     <script>
         function changeImage(x){
             document.getElementById("image").src=x

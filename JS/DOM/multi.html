@@ -30,8 +30,8 @@
     <script>
         let input1=document.getElementById("input1")
         let input2=document.getElementById("input2")
-        let leftDiv=document.getElementById("left-div").innerHTML
-        let rightDiv=document.getElementById("right-div").innerHTML
+        let leftDiv=document.getElementById("left-div")
+        let rightDiv=document.getElementById("right-div")
 
 
         function getinput(){
@@ -39,15 +39,15 @@
         }
         function getAlerts(){
             alert(input1.value)
-            alert(leftDiv)
-            alert(rightDiv)
+            alert(leftDiv.innerHTML)
+            alert(rightDiv.innerHTML)
         }
         function changeValue(){
-            document.getElementById("right-div").innerHTML=input1.value
+            rightDiv.innerHTML=input1.value
         }
 
         function concat(){
-            document.getElementById("left-div").innerHTML=leftDiv.concat(input1.value).concat(input2.value)
+            leftDiv.innerHTML+=input1.value+input2.value
         }
         function convert(){
             input1.type="radio"

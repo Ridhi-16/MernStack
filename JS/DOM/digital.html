@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height:590px;
+            background: transparent url("taj.jpg")  no-repeat center/cover ;
+            display: flex;
+            justify-content: center;
+            
+        }
+        .box h2{
+            position: relative;
+            margin-top: 230px;
+            margin-left: 120px;
+
+
+        }
+        .inner{
+            position:relative;
+            margin-top: 10px;
+            background-color: rgba(255, 255, 255, 0.438);
+            height:130px;
+            width:400px;
+
+        }
+        .inner p{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+            <h2>Time in India</h2>
+            
+            <div class="inner" >
+                <p id="line1"></p>
+                <p id="line2"></p>
+                <p id="line3"></p>
+                <p id="line4"></p>
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        function getDate(){
+            x= setInterval(()=>{
+            let date=new Date()
+            document.getElementById("line1").innerHTML=date
+            document.getElementById("line2").innerHTML=("Hours", date.getHours());
+            document.getElementById("line3").innerHTML=("Minutes", date.getMinutes());
+            document.getElementById("line4").innerHTML=("Seconds", date.getSeconds());
+            },1000)
+        }
+        getDate()
+
+        
+        
+    </script>
+</body>
+</html>
