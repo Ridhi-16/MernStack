@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Number</label>
+    <input type="text" name="" id="no">
+    <button onclick="getDivs()" id="btn">divs</button>
+    <div id="output"></div>
+
+
+    <script>
+       function getDivs()
+       {
+        let input=document.getElementById("no").value
+        if(input%2==0){
+            for(var i=0;i<=input.length;i++){
+                 console.log(input.length);
+                let div=document.createElement("div")
+                div.style.backgroundColor="red"
+                div.innerHTML="div"
+                document.getElementById("output").appendChild(div)
+            }
+        }
+        else{
+            for(var i=0;i<=input.length;i++){
+                console.log(input.length);
+                
+                let div=document.createElement("div")
+                div.style.backgroundColor="yellow"
+                div.innerHTML="div"
+
+                document.getElementById("output").appendChild(div)
+            }
+
+        }
+            
+
+        }
+
+    </script>
+</body>
+</html>

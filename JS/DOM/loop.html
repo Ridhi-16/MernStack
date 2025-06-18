@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            position: absolute;
+            top: 130px;
+            left: 500px;
+            border: groove 2px black;
+            padding:50px;
+        }
+        .btn{
+            margin-left: 60px;
+        }
+        #table{
+            display:flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <table  >
+        <th>LABELS</th>
+        <th>INPUTS</th>
+
+        <tr>
+            <td><label for="">START</label></td>
+            <td><input type="number" name="" id="start"></td>
+        </tr>
+        <tr>
+            <td><label for="">END</label></td>
+            <td><input type="number" name="" id="end"></td>
+        </tr>
+        <tr>
+            <td><label for="">NUMBER</label></td>
+            <td><input type="number" name="" id="no"></td>
+        </tr>
+    </table>
+    <br>
+    <button onclick="createTable()" class="btn"> GENERATE TABLE</button>
+    <p  id="text"></p>
+    <br>
+    <br>
+    <div id="table"></div>
+    </div>
+    
+
+
+    <script>
+        function createTable(){
+            let start=parseInt(document.getElementById("start").value)
+            let end=parseInt(document.getElementById("end").value)
+            let no=parseInt(document.getElementById("no").value)
+            let table=document.getElementById("table")
+
+            if(isNaN(start) || isNaN(end) || isNaN(no)){
+                document.getElementById("text").innerHTML="<h1>Please give input</h1>"
+            }
+            else{
+                document.getElementById("text").style.display="none"
+                for(let i=start;i<=end;i++){
+                    table.innerHTML+=`${no}&nbsp;  *  &nbsp; ${i}&nbsp;= &nbsp;${no*i}<br>`
+                }
+
+            }
+
+        }
+    </script>
+</body>
+</html>
