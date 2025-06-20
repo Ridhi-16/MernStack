@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">ADD NAMES</label>
+    <input type="text" name="" id="input">
+    <button id="add" onclick="add()">add</button>
+    <br>
+    <button id="show" onclick="show()">show</button>
+    <br>
+    <br>
+    <label for="">Names Entered:</label>
+    <select name="select" id="select">
+    </select>
+
+    <script>
+        var  tasks=[];
+        function add(){
+            let input=document.getElementById("input").value
+            tasks.push(input)
+        }
+        function show(){
+            let select=document.getElementById("select")
+            select.innerHTML="<option>Select</option>";
+            for(let i=0;i<tasks.length;i++){
+                let option=document.createElement("option")
+                option.innerHTML+=tasks[i]
+                document.getElementById("select").appendChild(option)
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>

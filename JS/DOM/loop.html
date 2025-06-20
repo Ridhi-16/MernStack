@@ -13,7 +13,8 @@
             padding:50px;
         }
         .btn{
-            margin-left: 60px;
+            display: block;
+            margin: 0px auto;
         }
         #table{
             display:flex;
@@ -57,7 +58,7 @@
             let no=parseInt(document.getElementById("no").value)
             let table=document.getElementById("table")
 
-            if(isNaN(start) || isNaN(end) || isNaN(no)){
+            if(start=""|| isNaN(end) || isNaN(no)){
                 document.getElementById("text").innerHTML="<h1>Please give input</h1>"
             }
             else{

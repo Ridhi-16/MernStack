@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To-Do List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    input {
+      padding: 8px;
+      font-size: 16px;
+      width: 250px;
+    }
+
+    button {
+      padding: 8px 12px;
+      margin-left: 5px;
+      font-size: 14px;
+    }
+
+    .task {
+      margin: 10px 0;
+    }
+
+    .task span {
+      margin-right: 15px;
+      font-size: 16px;
+    }
+
+    .edit-btn {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .delete-btn {
+      background-color: #f44336;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>To-Do List</h2>
+  <input type="text" id="taskInput" placeholder="Add a new to-do" />
+  <button onclick="addTask()">Add</button>
+
+  <div id="taskList"></div>
+
+  <script>
+    let tasks = [];
+
+    function addTask() {
+      const input = document.getElementById("taskInput");
+      const taskText = input.value.trim();
+      if (taskText) {
+        tasks.push(taskText);
+        input.value = "";
+        displayTasks();
+      }
+    }
+
+    function displayTasks() {
+      const taskList = document.getElementById("taskList");
+      taskList.innerHTML = "";
+
+      for (let i = 0; i < tasks.length; i++) {
+        const div = document.createElement("div");
+        div.className = "task";
+
+        const span = document.createElement("span");
+        span.textContent = tasks[i];
+
+        const editBtn = document.createElement("button");
+        editBtn.textContent = "Edit";
+        editBtn.className = "edit-btn";
+        editBtn.onclick = function () {
+          editTask(i);
+        };
+
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Delete";
+        deleteBtn.className = "delete-btn";
+        deleteBtn.onclick = function () {
+          deleteTask(i);
+        };
+
+        div.appendChild(span);
+        div.appendChild(editBtn);
+        div.appendChild(deleteBtn);
+        taskList.appendChild(div);
+      }
+    }
+
+    function editTask(index) {
+      const newTask = prompt("Edit your to-do:", tasks[index]);
+      if (newTask !== null && newTask.trim() !== "") {
+        tasks[index] = newTask.trim();
+        displayTasks();
+      }
+    }
+
+    function deleteTask(index) {
+      tasks.splice(index, 1);
+      displayTasks();
+    }
+  </script>
+
+</body>
+</html>

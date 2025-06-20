@@ -4,21 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .box{
+            display:block;
+            border: solid 5px brown;
+            padding: 20px;
+           
+        }
+        .inner{
+            position: relative;
+            left:500px;
+        }
+        #btn{
+            margin-left: 100px;
+
+        }
+    </style>
 </head>
 <body>
-    <label for="">Number</label>
-    <input type="text" name="" id="no">
-    <button onclick="getDivs()" id="btn">divs</button>
-    <div id="output"></div>
+    <div class="box">
+        <div class="inner">
+            <label for="">Number</label>
+            <input type="number" name="" id="no">
+            <br>
+            <br>
+            <button onclick="getDivs()" id="btn">divs</button>
+            <br>
+        </div>
+       
+        <div id="output"></div>
+    </div>
+    
 
 
     <script>
        function getDivs()
        {
         let input=document.getElementById("no").value
+        let size=parseInt(input)
+        
         if(input%2==0){
-            for(var i=0;i<=input.length;i++){
-                 console.log(input.length);
+            for(var i=1;i<=size;i++){
+
                 let div=document.createElement("div")
                 div.style.backgroundColor="red"
                 div.innerHTML="div"
@@ -26,13 +53,11 @@
             }
         }
         else{
-            for(var i=0;i<=input.length;i++){
-                console.log(input.length);
+            for(var i=1;i<=size;i++){
                 
                 let div=document.createElement("div")
                 div.style.backgroundColor="yellow"
                 div.innerHTML="div"
-
                 document.getElementById("output").appendChild(div)
             }
 

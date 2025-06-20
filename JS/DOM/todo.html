@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <style>
+        .main{
+            margin-top: 140px;
+            
+        }
+        input{
+            margin-bottom: 10px;
+        }
+        .button,.button1{
+            /* margin-top: 20px; */
+            margin-left: 10px;
+            margin-right: 10px;
+            color:rgb(255, 255, 255);
+        }
+        .button1{
+            color:red
+
+        }
+        .items{
+            /* margin-bottom: 5px; */
+            
+        }
+        ul{
+            padding: 0;
+            margin:0;
+        }
+        .hr{
+            width:200px;
+            /* align-items: self-start; */
+            display: inline-block;
+            margin-left:5px
+        }
+
+        
+    </style>
+</head>
+<body>
+   <div class="main card text-center mx-auto " style="width: 18rem;">
+        <div class="card-body text-center">
+            <h1 class="card-title "> TO-DO LIST</h1>
+            <input type="text" id="input">
+            <button  id="btn" class="btn btn-primary" onclick="add()">add</button>
+            <ul type="none" id="list"></ul>
+        </div>
+   </div>
+
+
+    <script>
+        function add(){
+            let input=document.getElementById("input").value
+            let list=document.createElement("li")
+            list.innerHTML=input
+            let msg=list.innerHTML
+            console.log(list.innerHTML);
+            
+            list.setAttribute("class","items")
+           
+            document.getElementById("list").appendChild(list)
+
+           let item=document.createElement("button")
+           item.innerHTML="Edit"
+           item.setAttribute("class"," button  btn btn-primary")
+           let edit=document.getElementsByClassName("items")
+           let button=document.getElementsByClassName("button")
+            for(let i=0;i<edit.length;i++){
+                edit[i].appendChild(item)
+            }
+            
+            let del=document.createElement("button")
+            del.innerHTML="Delete"
+            del.setAttribute("class"," button1  btn btn-primary")
+            let delbtn=document.getElementsByClassName("items")
+            for(let i=0;i<edit.length;i++){
+                delbtn[i].appendChild(del)
+
+            }
+             item.addEventListener("click", () => {
+                let mesg = prompt("Edit task:",msg);
+                   mesg=msg
+                });
+
+            del.addEventListener("click",()=>{
+                list.remove();
+            })
+
+            let hr=document.createElement("hr")
+            hr.setAttribute("class","hr")
+            document.getElementById("list").appendChild(hr)
+
+        }
+
+        
+
+        
+
+
+    </script>
+</body>
+</html>
