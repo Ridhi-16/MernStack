@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #err{
+            display: inline;
+            color:white;
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
     <label for="">ADD NAMES</label>
@@ -12,6 +19,7 @@
     <br>
     <button id="show" onclick="show()">show</button>
     <br>
+    <p id="err"></p>
     <br>
     <label for="">Names Entered:</label>
     <select name="select" id="select">
@@ -21,7 +29,14 @@
         var  tasks=[];
         function add(){
             let input=document.getElementById("input").value
-            tasks.push(input)
+            if(tasks.includes(input)){
+               
+                document.getElementById("err").innerHTML="vaalue added before"
+            }
+            else{
+                tasks.push(input)
+            }
+           
         }
         function show(){
             let select=document.getElementById("select")
@@ -29,7 +44,8 @@
             for(let i=0;i<tasks.length;i++){
                 let option=document.createElement("option")
                 option.innerHTML+=tasks[i]
-                document.getElementById("select").appendChild(option)
+                let select=document.getElementById("select")
+                select.appendChild(option)
             }
         }
 

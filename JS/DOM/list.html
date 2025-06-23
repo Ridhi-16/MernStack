@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main card text-center mx-auto " style="width: 18rem;">
+        <div class="card-body text-center">
+            <h1 class="card-title "> TO-DO LIST</h1>
+            <input type="text" id="input">
+            <button  id="btn" class="btn btn-primary" onclick="add()">add</button>
+            <ul type="none" id="list"></ul>
+        </div>
+   </div>
+
+
+   <script>
+    function add(){
+        let tasks=[];
+        let input=document.getElementById("input").value
+        tasks.push(input);
+        list=document.getElementById("list")
+        
+        for(let i=0;i<tasks.length;i++){
+            list.innerHTML+=`${tasks[i]}<br>`
+
+        }
+        
+    
+    }
+   </script>
+</body>
+</html>
