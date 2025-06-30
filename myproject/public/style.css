@@ -1,0 +1,10 @@
+.div{
+    border:solid 5px yellow;
+    background-color: red;
+    border-radius: 20px;
+    text-align: left;
+    margin: 20px 0 10px 0;
+}
+.div img{
+    width:100px;
+}
