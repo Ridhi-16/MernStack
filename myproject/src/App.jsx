@@ -5,6 +5,11 @@ import Shopping from "./components/Shopping"
 import ProductCard from "./components/ProductCard"
 import ContactCard from "./components/ContactCard"
 import Weather from "./components/Weather"
+import Students from "./components/Students"
+import EmployeeData from "./components/EmployeeData"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import Zomato from "./components/Zomato"
 
 function App(){
   // let {name,price}=obj
@@ -25,7 +30,7 @@ function App(){
     </table>
     <br /> */}
 
-    <h1 style={{textAlign:"center"}}>Shopping Cart</h1>
+    {/* <h1 style={{textAlign:"center"}}>Shopping Cart</h1>
     <table border="1px" cellPadding="5px" cellSpacing="1px"  style={{marginLeft:"560PX"}}>
       <tr>
         <th>name</th>
@@ -68,8 +73,50 @@ function App(){
         <Weather  place="ludhiana" temp="37" humidity="27"/>
         <Weather  place="agra" temp="40" humidity="20"/>
       
+    </table> */}
+    <h1 className=" text-center ">Students Name are:</h1>
+    <div className="block bg-dark p-0 text-center">
+      
+      <Students/>
+      
+    </div>
+    <br /><br /><br />
+    <h1 className="text-center ">Employee Data</h1>
+    <table className="table table-bordered table-dark table-striped">
+      <thead>
+        <tr>
+          <td>Sno</td>
+          <td>Name</td>
+          <td>Department</td>
+          <td>Salary</td>
+        </tr>
+                
+      </thead>
+      <tbody>
+        <EmployeeData/>
+      </tbody>
     </table>
+
+
+    <br /><br /><br />
+    <h1 className="text-center ">Zomato Restaurant Details</h1>
+    <table className="table table-bordered table-dark table-striped ">
+      <thead>
+        <tr>
+          <td>Sno</td>
+          <td>Name</td>
+          <td>rating</td>
+          <td>image</td>
+        </tr>
+                
+      </thead>
+      <tbody>
+        <Zomato/>
+      </tbody>
+    </table>
+      
   
+    
 
 
 

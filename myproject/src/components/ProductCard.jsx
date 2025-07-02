@@ -1,10 +1,4 @@
-// function ProductCard(props) {
-//     return(
-//         <>
-//         {props.name}
-//         </>
-//     )
-// }
+
 function ProductCard(props) {
   let { name,price,description } = props;
   return (
@@ -12,11 +6,11 @@ function ProductCard(props) {
     <div className="product">
         
         <hr className="tab" />
-        <label htmlFor="" id="name">Name:</label>{props.name}
+        <label  id="name">Name:</label>{name}
         <br />
-        <label htmlFor="">Price:</label>{props.price}
+        <label >Price:</label>{price}
         <br />
-        <label htmlFor="">Description:</label>{props.description}
+        <label >Description:</label>{description}
     </div>
     </>
   )

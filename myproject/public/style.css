@@ -18,7 +18,7 @@
 
 
 
-.product{
+/* .product{
     display: inline-block;
     width:300px;
     background-color:plum ;
@@ -41,4 +41,13 @@ label{
     padding: 10px;
     margin-left: 10px;
     
+} */
+
+
+
+.block{
+    display:block;
+    margin:0 auto;
+    border:solid 1px white;
+    /* width:500px; */
 }
