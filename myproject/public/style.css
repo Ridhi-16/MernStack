@@ -30,24 +30,51 @@
     background-color: pink;
     font-weight: bolder;
 }
-.tab{
+    */
+/* .tab{
     margin-top: 0;
-    height:40px;
-    background-color:red;
-}
-label{
-    font-weight: 900;
-    color:brown;
-    padding: 10px;
-    margin-left: 10px;
+    height: 20px;
     
+} */
+ /* label{
+    font-weight: 900;
+    color:rgb(19, 18, 18);
+}  */
+ /* .employee{
+    display: inline-block;
+    width:300px;
+    background-color:rgba(14, 13, 14, 0) ;
+    margin: 0 60px;
+    height:120px;
+} */
+
+/* .block{
+    display:block;
+    margin:0 auto;
+    border:solid 1px white;
+  
 } */
 
 
 
-.block{
-    display:block;
-    margin:0 auto;
-    border:solid 1px white;
-    /* width:500px; */
+.start{
+    color:darkmagenta;
+    font-weight: bolder;
+}
+.pl1{
+    color:blue;
+    font-weight: bolder;
+}
+.pl2{
+    color:crimson;
+    font-weight: bolder;
+}
+
+.win{
+    color:rgb(247, 11, 176);
+    font-weight: bolder;
+    font-size: larger;
+}
+.main{
+    background-color: beige;
 }
