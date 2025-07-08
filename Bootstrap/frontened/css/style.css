@@ -38,7 +38,7 @@ body {
 	background-color: #000;
 }
 .nav {
-  background: linear-gradient(to right, #FF6B00, #FF6B00);
+  background: linear-gradient(to right, black);
   
 }
 .navbar-brand,
@@ -46,11 +46,11 @@ body {
 .dropdown-toggle,
 .dropdown-item,
 .bi {
-  color: #fff !important;
+  color: gold!important;
 }
 .nav-link:hover,
 .dropdown-item:hover {
-  color: #000000 !important;
+  color: #ffffff !important;
   background: none;
 }
 .dropdown-menu {
@@ -174,6 +174,9 @@ ol {
 .set-img{
 	position: absolute;
 	top:72px;
+}
+.set-back{
+	background:  url("../img/about-bg-2.jpg") centre/cover fixed;
 }
 
 .spad {

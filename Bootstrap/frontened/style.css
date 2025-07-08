@@ -1,5 +1,43 @@
-.nav {
+.login-body {
   background: linear-gradient(to right, #FF6B00, #FF6B00);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.login-box {
+  background: rgb(0, 0, 0);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  color:white
+}
+.login-box h2 {
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+.form-control:focus {
+  border-color: #FF6B00;
+  box-shadow: none;
+}
+.login-btn {
+  background-color: #FF6B00;
+  border-color:#ffc400;
+  /* #ffc107 */
+}
+.login-btn:hover {
+  background-color: #ffc107;
+}
+.login a{
+  text-decoration: none;
+  color:white;
+}
+.nav {
+  background: linear-gradient(to right, #000000, #000000);
 }
 .navbar-brand,
 .nav-link,

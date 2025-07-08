@@ -1,25 +1,23 @@
-import Introduction from "./components/Introduction"
-import Div from "./components/Div"
-import Employee from "./components/Employee"
-import Shopping from "./components/Shopping"
-import ProductCard from "./components/ProductCard"
-import ContactCard from "./components/ContactCard"
-import Weather from "./components/Weather"
-import Students from "./components/Students"
-import EmployeeData from "./components/EmployeeData"
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import Zomato from "./components/Zomato"
-import Counter from "./components/Counter"
-import Game from "./components/Game"
-import Regame from "./components/Regame"
+
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Home from "./components/Home"
+import About from "./components/About"
+import Picture from './components/Picture';
 
 function App(){
   return(
     <>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/about" element={<About/>}/>
+      <Route path="/pic" element={<Picture/>}/>
 
-    <Game/>
-    <Regame/>
+    </Routes>
+    </BrowserRouter>
 
 
   </>
