@@ -109,7 +109,7 @@ export default function Error(){
         <div className="col-lg-3">
           <div className="logo">
             <a href="./index.html">
-              <img src="img/logo.png" alt="" />
+              <img src="/assets/img/logo.png" alt="" />
             </a>
           </div>
         </div>
@@ -194,7 +194,7 @@ export default function Error(){
   {/* Hero Section Begin */}
   <section className="hero-section">
     <div className="hs-slider owl-carousel">
-      <div className="hs-item set-bg" data-setbg="img/hero/hero-1.jpg">
+      <div className="hs-item set-bg" data-setbg="/assets/img/hero/hero-1.jpg" style={{background:'url("/assets/img/hero/hero-1.jpg")'}} >
         <div className="container">
           <div className="row">
             <div className="col-lg-6 offset-lg-6">
@@ -211,7 +211,7 @@ export default function Error(){
           </div>
         </div>
       </div>
-      <div className="hs-item set-bg" data-setbg="img/hero/hero-2.jpg">
+      <div className="hs-item set-bg"  style={{background:'url("/assets/img/hero/hero-2.jpg")'}}>
         <div className="container">
           <div className="row">
             <div className="col-lg-6 offset-lg-6">
@@ -302,7 +302,7 @@ export default function Error(){
         <div className="col-lg-4 col-md-6">
           <div className="class-item">
             <div className="ci-pic">
-              <img src="img/classes/class-1.jpg" alt="" />
+              <img src="/assets/img/classes/class-1.jpg" alt="" />
             </div>
             <div className="ci-text">
               <span>STRENGTH</span>
@@ -316,7 +316,7 @@ export default function Error(){
         <div className="col-lg-4 col-md-6">
           <div className="class-item">
             <div className="ci-pic">
-              <img src="img/classes/class-2.jpg" alt="" />
+              <img src="/assets/img/classes/class-2.jpg" alt="" />
             </div>
             <div className="ci-text">
               <span>Cardio</span>
@@ -330,7 +330,7 @@ export default function Error(){
         <div className="col-lg-4 col-md-6">
           <div className="class-item">
             <div className="ci-pic">
-              <img src="img/classes/class-3.jpg" alt="" />
+              <img src="/assets/img/classes/class-3.jpg" alt="" />
             </div>
             <div className="ci-text">
               <span>STRENGTH</span>
@@ -344,7 +344,7 @@ export default function Error(){
         <div className="col-lg-6 col-md-6">
           <div className="class-item">
             <div className="ci-pic">
-              <img src="img/classes/class-4.jpg" alt="" />
+              <img src="/assets/img/classes/class-4.jpg" alt="" />
             </div>
             <div className="ci-text">
               <span>Cardio</span>
@@ -358,7 +358,7 @@ export default function Error(){
         <div className="col-lg-6">
           <div className="class-item">
             <div className="ci-pic">
-              <img src="img/classes/class-5.jpg" alt="" />
+              <img src="/assets/img/classes/class-5.jpg" alt="" />
             </div>
             <div className="ci-text">
               <span>Training</span>
@@ -374,7 +374,7 @@ export default function Error(){
   </section>
   {/* ChoseUs Section End */}
   {/* Banner Section Begin */}
-  <section className="banner-section set-bg" data-setbg="img/banner-bg.jpg">
+  <section className="banner-section set-bg"  style={{background:'url("/assets/img/banner-bg.jpg")'}}>
     <div className="container">
       <div className="row">
         <div className="col-lg-12 text-center">
@@ -483,37 +483,39 @@ export default function Error(){
       <div className="grid-sizer" />
       <div
         className="gs-item grid-wide set-bg"
-        data-setbg="img/gallery/gallery-1.jpg"
+        
+        style={{background:'url("/assets/img/gallery/gallery-1.jpg")'}}
       >
-        <a href="img/gallery/gallery-1.jpg" className="thumb-icon image-popup">
+        <a href="/assets/img/gallery/gallery-1.jpg" className="thumb-icon image-popup">
           <i className="fa fa-picture-o" />
         </a>
       </div>
-      <div className="gs-item set-bg" data-setbg="img/gallery/gallery-2.jpg">
-        <a href="img/gallery/gallery-2.jpg" className="thumb-icon image-popup">
+      <div className="gs-item set-bg" style={{background:'url("/assets/img/gallery/gallery-2.jpg")'}}>
+        <a href="/assets/img/gallery/gallery-2.jpg" className="thumb-icon image-popup">
           <i className="fa fa-picture-o" />
         </a>
       </div>
-      <div className="gs-item set-bg" data-setbg="img/gallery/gallery-3.jpg">
-        <a href="img/gallery/gallery-3.jpg" className="thumb-icon image-popup">
+      <div className="gs-item set-bg" style={{background:'url("/assets/img/gallery/gallery-3.jpg")'}}>
+        <a href="/assets/img/gallery/gallery-3.jpg" className="thumb-icon image-popup">
           <i className="fa fa-picture-o" />
         </a>
       </div>
-      <div className="gs-item set-bg" data-setbg="img/gallery/gallery-4.jpg">
-        <a href="img/gallery/gallery-4.jpg" className="thumb-icon image-popup">
+      <div className="gs-item set-bg"  style={{background:'url("/assets/img/gallery/gallery-4.jpg")'}}>
+        <a href="/assets/img/gallery/gallery-4.jpg" className="thumb-icon image-popup">
           <i className="fa fa-picture-o" />
         </a>
       </div>
-      <div className="gs-item set-bg" data-setbg="img/gallery/gallery-5.jpg">
-        <a href="img/gallery/gallery-5.jpg" className="thumb-icon image-popup">
+      <div className="gs-item set-bg" style={{background:'url("/assets/img/gallery/gallery-5.jpg")'}}>
+        <a href="/assets/img/gallery/gallery-5.jpg" className="thumb-icon image-popup">
           <i className="fa fa-picture-o" />
         </a>
       </div>
       <div
         className="gs-item grid-wide set-bg"
-        data-setbg="img/gallery/gallery-6.jpg"
+        
+        style={{background:'url("/assets/img/gallery/gallery-6.jpg")'}}
       >
-        <a href="img/gallery/gallery-6.jpg" className="thumb-icon image-popup">
+        <a href="/assets/img/gallery/gallery-6.jpg" className="thumb-icon image-popup">
           <i className="fa fa-picture-o" />
         </a>
       </div>
@@ -539,7 +541,7 @@ export default function Error(){
       <div className="row">
         <div className="ts-slider owl-carousel">
           <div className="col-lg-4">
-            <div className="ts-item set-bg" data-setbg="img/team/team-1.jpg">
+            <div className="ts-item set-bg"  style={{background:'url("/assets/img/team/team-1.jpg")'}}>
               <div className="ts_text">
                 <h4>Athart Rachel</h4>
                 <span>Gym Trainer</span>
@@ -547,7 +549,7 @@ export default function Error(){
             </div>
           </div>
           <div className="col-lg-4">
-            <div className="ts-item set-bg" data-setbg="img/team/team-2.jpg">
+            <div className="ts-item set-bg"  style={{background:'url("/assets/img/team/team-2.jpg")'}}>
               <div className="ts_text">
                 <h4>Athart Rachel</h4>
                 <span>Gym Trainer</span>
@@ -555,7 +557,7 @@ export default function Error(){
             </div>
           </div>
           <div className="col-lg-4">
-            <div className="ts-item set-bg" data-setbg="img/team/team-3.jpg">
+            <div className="ts-item set-bg"  style={{background:'url("/assets/img/team/team-3.jpg")'}}>
               <div className="ts_text">
                 <h4>Athart Rachel</h4>
                 <span>Gym Trainer</span>
@@ -563,7 +565,7 @@ export default function Error(){
             </div>
           </div>
           <div className="col-lg-4">
-            <div className="ts-item set-bg" data-setbg="img/team/team-4.jpg">
+            <div className="ts-item set-bg" style={{background:'url("/assets/img/team/team-4.jpg")'}}>
               <div className="ts_text">
                 <h4>Athart Rachel</h4>
                 <span>Gym Trainer</span>
@@ -571,7 +573,7 @@ export default function Error(){
             </div>
           </div>
           <div className="col-lg-4">
-            <div className="ts-item set-bg" data-setbg="img/team/team-5.jpg">
+            <div className="ts-item set-bg"  style={{background:'url("/assets/img/team/team-5.jpg")'}}>
               <div className="ts_text">
                 <h4>Athart Rachel</h4>
                 <span>Gym Trainer</span>
@@ -579,7 +581,7 @@ export default function Error(){
             </div>
           </div>
           <div className="col-lg-4">
-            <div className="ts-item set-bg" data-setbg="img/team/team-6.jpg">
+            <div className="ts-item set-bg"  style={{background:'url("/assets/img/team/team-6.jpg")'}}>
               <div className="ts_text">
                 <h4>Athart Rachel</h4>
                 <span>Gym Trainer</span>
@@ -631,7 +633,7 @@ export default function Error(){
           <div className="fs-about">
             <div className="fa-logo">
               <a href="#">
-                <img src="img/logo.png" alt="" />
+                <img src="/assets/img/logo.png" alt="" />
               </a>
             </div>
             <p>

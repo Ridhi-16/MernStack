@@ -167,7 +167,6 @@ export default function Team(){
   {/* Breadcrumb Section Begin */}
   <section
     className="breadcrumb-section set-bg"
-    
      style={{background:'url("/assets/img/breadcrumb-bg.jpg")'}}
   >
     <div className="container">

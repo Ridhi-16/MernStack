@@ -167,7 +167,7 @@ export default function Gallery(){
   {/* Breadcrumb Section Begin */}
   <section
     className="breadcrumb-section set-bg"
-    data-setbg="/assets/img/breadcrumb-bg.jpg"
+    
     style={{background:'url("/assets/img/breadcrumb-bg.jpg")'}}
   >
     
@@ -193,7 +193,7 @@ export default function Gallery(){
       <div className="grid-sizer" />
       <div
         className="gs-item grid-wide set-bg"
-        data-setbg="/assets/img/gallery/gallery-1.jpg"
+       
         style={{background:'url("/assets/img/gallery/gallery-1.jpg")'}}
         
       >
@@ -201,25 +201,24 @@ export default function Gallery(){
           <i className="fa fa-picture-o" />
         </a>
       </div>
-      <div className="gs-item set-bg" data-setbg="/assets/img/gallery/gallery-2.jpg"
-      style={{background:'url("/assets/img/gallery/gallery-2.jpg")'}}>
+      <div className="gs-item set-bg"  style={{background:'url("/assets/img/gallery/gallery-2.jpg")'}}>
         <a href="/assets/img/gallery/gallery-2.jpg" className="thumb-icon image-popup">
           <i className="fa fa-picture-o" />
         </a>
       </div>
-      <div className="gs-item set-bg" data-setbg="/assets/img/gallery/gallery-3.jpg"
+      <div className="gs-item set-bg" 
       style={{background:'url("/assets/img/gallery/gallery-3.jpg")'}}>
         <a href="/assets/img/gallery/gallery-3.jpg" className="thumb-icon image-popup">
           <i className="fa fa-picture-o" />
         </a>
       </div>
-      <div className="gs-item set-bg" data-setbg="/assets/img/gallery/gallery-4.jpg"
+      <div className="gs-item set-bg" 
       style={{background:'url("/assets/img/gallery/gallery-4.jpg")'}}>
         <a href="/assets/img/gallery/gallery-4.jpg" className="thumb-icon image-popup">
           <i className="fa fa-picture-o" />
         </a>
       </div>
-      <div className="gs-item set-bg" data-setbg="/assets/img/gallery/gallery-5.jpg"
+      <div className="gs-item set-bg" 
       style={{background:'url("/assets/img/gallery/gallery-5.jpg")'}}>
         <a href="/assets/img/gallery/gallery-5.jpg" className="thumb-icon image-popup">
           <i className="fa fa-picture-o" />
@@ -227,7 +226,7 @@ export default function Gallery(){
       </div>
       <div
         className="gs-item grid-wide set-bg"
-        data-setbg="/assets/img/gallery/gallery-6.jpg"
+       
         style={{background:'url("/assets/img/gallery/gallery-6.jpg")'}}
       >
         <a href="/assets/img/gallery/gallery-6.jpg" className="thumb-icon image-popup">
@@ -236,20 +235,20 @@ export default function Gallery(){
       </div>
       <div
         className="gs-item grid-wide set-bg"
-        data-setbg="/assets/img/gallery/gallery-7.jpg"
+        
         style={{background:'url("/assets/img/gallery/gallery-7.jpg")'}}
       >
         <a href="/assets/img/gallery/gallery-7.jpg" className="thumb-icon image-popup">
           <i className="fa fa-picture-o" />
         </a>
       </div>
-      <div className="gs-item set-bg" data-setbg="/assets/img/gallery/gallery-8.jpg"
+      <div className="gs-item set-bg" 
       style={{background:'url("/assets/img/gallery/gallery-8.jpg")'}}>
         <a href="/assets/img/gallery/gallery-8.jpg" className="thumb-icon image-popup">
           <i className="fa fa-picture-o" />
         </a>
       </div>
-      <div className="gs-item set-bg" data-setbg="/assets/img/gallery/gallery-9.jpg"
+      <div className="gs-item set-bg" 
       style={{background:'url("/assets/img/gallery/gallery-9.jpg")'}}>
         <a href="/assets/img/gallery/gallery-9.jpg" className="thumb-icon image-popup">
           <i className="fa fa-picture-o" />
