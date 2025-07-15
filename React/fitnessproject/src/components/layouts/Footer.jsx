@@ -1,104 +1,7 @@
-export default function Gallery(){
+export default function Footer(){
     return(
         <>
-        <>
-
-  {/* Header End */}
-  {/* Breadcrumb Section Begin */}
-  <section
-    className="breadcrumb-section set-bg"
-    
-    style={{background:'url("/assets/img/breadcrumb-bg.jpg")'}}
-  >
-    
-    <div className="container">
-      <div className="row">
-        <div className="col-lg-12 text-center">
-          <div className="breadcrumb-text">
-            <h2>Gallery</h2>
-            <div className="bt-option">
-              <a href="./index.html">Home</a>
-              <a href="#">Pages</a>
-              <span>Gallery</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  {/* Breadcrumb Section End */}
-  {/* Gallery Section Begin */}
-  <div className="gallery-section gallery-page">
-    <div className="gallery">
-      <div className="grid-sizer" />
-      <div
-        className="gs-item grid-wide set-bg"
-       
-        style={{background:'url("/assets/img/gallery/gallery-1.jpg")'}}
-        
-      >
-        <a href="/assets/img/gallery/gallery-1.jpg" className="thumb-icon image-popup">
-          <i className="fa fa-picture-o" />
-        </a>
-      </div>
-      <div className="gs-item set-bg"  style={{background:'url("/assets/img/gallery/gallery-2.jpg")'}}>
-        <a href="/assets/img/gallery/gallery-2.jpg" className="thumb-icon image-popup">
-          <i className="fa fa-picture-o" />
-        </a>
-      </div>
-      <div className="gs-item set-bg" 
-      style={{background:'url("/assets/img/gallery/gallery-3.jpg")'}}>
-        <a href="/assets/img/gallery/gallery-3.jpg" className="thumb-icon image-popup">
-          <i className="fa fa-picture-o" />
-        </a>
-      </div>
-      <div className="gs-item set-bg" 
-      style={{background:'url("/assets/img/gallery/gallery-4.jpg")'}}>
-        <a href="/assets/img/gallery/gallery-4.jpg" className="thumb-icon image-popup">
-          <i className="fa fa-picture-o" />
-        </a>
-      </div>
-      <div className="gs-item set-bg" 
-      style={{background:'url("/assets/img/gallery/gallery-5.jpg")'}}>
-        <a href="/assets/img/gallery/gallery-5.jpg" className="thumb-icon image-popup">
-          <i className="fa fa-picture-o" />
-        </a>
-      </div>
-      <div
-        className="gs-item grid-wide set-bg"
-       
-        style={{background:'url("/assets/img/gallery/gallery-6.jpg")'}}
-      >
-        <a href="/assets/img/gallery/gallery-6.jpg" className="thumb-icon image-popup">
-          <i className="fa fa-picture-o" />
-        </a>
-      </div>
-      <div
-        className="gs-item grid-wide set-bg"
-        
-        style={{background:'url("/assets/img/gallery/gallery-7.jpg")'}}
-      >
-        <a href="/assets/img/gallery/gallery-7.jpg" className="thumb-icon image-popup">
-          <i className="fa fa-picture-o" />
-        </a>
-      </div>
-      <div className="gs-item set-bg" 
-      style={{background:'url("/assets/img/gallery/gallery-8.jpg")'}}>
-        <a href="/assets/img/gallery/gallery-8.jpg" className="thumb-icon image-popup">
-          <i className="fa fa-picture-o" />
-        </a>
-      </div>
-      <div className="gs-item set-bg" 
-      style={{background:'url("/assets/img/gallery/gallery-9.jpg")'}}>
-        <a href="/assets/img/gallery/gallery-9.jpg" className="thumb-icon image-popup">
-          <i className="fa fa-picture-o" />
-        </a>
-      </div>
-    </div>
-  </div>
-  {/* Gallery Section End */}
-  {/* Get In Touch Section Begin */}
-  <div className="gettouch-section">
+        <div className="gettouch-section">
     <div className="container">
       <div className="row">
         <div className="col-md-4">
@@ -257,8 +160,7 @@ export default function Gallery(){
       </form>
     </div>
   </div>
-</>
-
+  {/* Search model end */}
         </>
     )
 }

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Header(){
     return(
         <>
@@ -12,48 +14,48 @@ export default function Header(){
     <nav className="canvas-menu mobile-menu">
       <ul>
         <li>
-          <a href="./index.html">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="./about-us.html">About Us</a>
+          <Link to="/about">About Us</Link>
         </li>
         <li>
-          <a href="./classes.html">Classes</a>
+          <Link to="/classdetails">Classes</Link>
         </li>
         <li>
-          <a href="./services.html">Services</a>
+          <Link to="/services">Services</Link>
         </li>
         <li>
-          <a href="./team.html">Our Team</a>
+          <Link to="/team">Our Team</Link>
         </li>
         <li>
-          <a href="#">Pages</a>
+          <Link to="#">Pages</Link>
           <ul className="dropdown">
             <li>
-              <a href="./about-us.html">About us</a>
+              <Link to="/about-us">About us</Link>
             </li>
             <li>
-              <a href="./class-timetable.html">Classes timetable</a>
+              <Link to="/classtimetable">Classes timetable</Link>
             </li>
             <li>
-              <a href="./bmi-calculator.html">Bmi calculate</a>
+              <Link to="/bmi">Bmi calculate</Link>
             </li>
             <li>
-              <a href="./team.html">Our team</a>
+              <Link to="/team">Our team</Link>
             </li>
             <li>
-              <a href="./gallery.html">Gallery</a>
+              <Link to="/gallery">Gallery</Link>
             </li>
             <li>
-              <a href="./blog.html">Our blog</a>
+              <Link to="/blog">Our blog</Link>
             </li>
             <li>
-              <a href="./404.html">404</a>
+              <Link to="/404">404</Link>
             </li>
           </ul>
         </li>
         <li>
-          <a href="./contact.html">Contact</a>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </nav>
@@ -80,7 +82,7 @@ export default function Header(){
       <div className="row">
         <div className="col-lg-3">
           <div className="logo">
-            <a href="./index.html">
+            <a href="/index">
               <img src="/assets/img/logo.png" alt="" />
             </a>
           </div>
@@ -88,49 +90,49 @@ export default function Header(){
         <div className="col-lg-6">
           <nav className="nav-menu">
             <ul>
-              <li className="active">
-                <a href="./index.html">Home</a>
+              <li className="active ">
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="./about-us.html">About Us</a>
+                <Link to="/about">About Us</Link>
               </li>
               <li>
-                <a href="./class-details.html">Classes</a>
+                <Link to="/classdetails">Classes</Link>
               </li>
               <li>
-                <a href="./services.html">Services</a>
+                <Link to="/services">Services</Link>
               </li>
               <li>
-                <a href="./team.html">Our Team</a>
+                <Link to="/team">Our Team</Link>
               </li>
               <li>
-                <a href="#">Pages</a>
+                <Link to="#">Pages</Link>
                 <ul className="dropdown">
                   <li>
-                    <a href="./about-us.html">About us</a>
+                    <Link to="/about">About us</Link>
                   </li>
                   <li>
-                    <a href="./class-timetable.html">Classes timetable</a>
+                    <Link to="/classtimetable">Classes timetable</Link>
                   </li>
                   <li>
-                    <a href="./bmi-calculator.html">Bmi calculate</a>
+                    <Link to="/bmi">Bmi calculate</Link>
                   </li>
                   <li>
-                    <a href="./team.html">Our team</a>
+                    <Link to="/team">Our team</Link>
                   </li>
                   <li>
-                    <a href="./gallery.html">Gallery</a>
+                    <Link to="/gallery">Gallery</Link>
                   </li>
                   <li>
-                    <a href="./blog.html">Our blog</a>
+                    <Link to="/blog">Our blog</Link>
                   </li>
                   <li>
-                    <a href="./404.html">404</a>
+                    <Link to="/404">404</Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="./contact.html">Contact</a>
+                <Link href="/contact">Contact</Link>
               </li>
             </ul>
           </nav>
