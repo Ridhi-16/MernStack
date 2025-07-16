@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 export default function Blog(){
@@ -38,10 +39,10 @@ export default function Blog(){
             </div>
             <div className="bi-text">
               <h5>
-                <a href="./blog-details.html">
+                <Link to="/blogdetails">
                   Vegan White Peach Mug Cobbler With Cardam Vegan White Peach
                   Mug Cobbler...
-                </a>
+                </Link>
               </h5>
               <ul>
                 <li>by Admin</li>

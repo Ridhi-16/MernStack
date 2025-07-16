@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Team(){
     return(
         <>
@@ -15,7 +17,7 @@ export default function Team(){
           <div className="breadcrumb-text">
             <h2>Our Team</h2>
             <div className="bt-option">
-              <a href="./index.html">Home</a>
+              <Link to="/">Home</Link >
               <span>Our team</span>
             </div>
           </div>

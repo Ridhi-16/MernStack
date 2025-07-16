@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
+let {pathname}=useLocation
 export default function Header(){
     return(
         <>
@@ -90,49 +91,49 @@ export default function Header(){
         <div className="col-lg-6">
           <nav className="nav-menu">
             <ul>
-              <li className="active ">
+              <li className={`nav item ${pathname=="/" && "active"}`} >
                 <Link to="/">Home</Link>
               </li>
-              <li>
+              <li className={`nav item ${pathname=="/" && "active"}`}>
                 <Link to="/about">About Us</Link>
               </li>
-              <li>
+              <li className={`nav item ${pathname=="/" && "active"}`}>
                 <Link to="/classdetails">Classes</Link>
               </li>
-              <li>
+              <li className={`nav item ${pathname=="/" && "active"}`}>
                 <Link to="/services">Services</Link>
               </li>
-              <li>
+              <li className={`nav item ${pathname=="/" && "active"}`}>
                 <Link to="/team">Our Team</Link>
               </li>
-              <li>
+              <li className={`nav item ${pathname=="/" && "active"}`}>
                 <Link to="#">Pages</Link>
                 <ul className="dropdown">
-                  <li>
+                  <li className={`nav item ${pathname=="/" && "active"}`}>
                     <Link to="/about">About us</Link>
                   </li>
-                  <li>
+                  <li className={`nav item ${pathname=="/" && "active"}`}>
                     <Link to="/classtimetable">Classes timetable</Link>
                   </li>
-                  <li>
+                  <li className={`nav item ${pathname=="/" && "active"}`}>
                     <Link to="/bmi">Bmi calculate</Link>
                   </li>
-                  <li>
+                  <li className={`nav item ${pathname=="/" && "active"}`}>
                     <Link to="/team">Our team</Link>
                   </li>
-                  <li>
+                  <li className={`nav item ${pathname=="/" && "active"}`}>
                     <Link to="/gallery">Gallery</Link>
                   </li>
-                  <li>
+                  <li className={`nav item ${pathname=="/" && "active"}`}> 
                     <Link to="/blog">Our blog</Link>
                   </li>
-                  <li>
+                  <li className={`nav item ${pathname=="/" && "active"}`}>
                     <Link to="/404">404</Link>
                   </li>
                 </ul>
               </li>
-              <li>
-                <Link href="/contact">Contact</Link>
+              <li className={`nav item ${pathname=="/" && "active"}`}>
+                <Link to="/contact">Contact</Link>
               </li>
             </ul>
           </nav>

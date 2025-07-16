@@ -17,7 +17,7 @@ export default function About(){
           <div className="breadcrumb-text">
             <h2>About us</h2>
             <div className="bt-option">
-              <Link to="./index.html">Home</Link>
+              <Link to="/">Home</Link>
               <span>About</span>
             </div>
           </div>

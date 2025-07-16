@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Contact(){
     return(
         <>
@@ -16,8 +18,8 @@ export default function Contact(){
           <div className="breadcrumb-text">
             <h2>Contact Us</h2>
             <div className="bt-option">
-              <a href="./index.html">Home</a>
-              <a href="#">Pages</a>
+              <Link to="/">Home</Link>
+              <Link to="#">Pages</Link>
               <span>Contact us</span>
             </div>
           </div>

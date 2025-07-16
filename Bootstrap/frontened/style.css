@@ -1,19 +1,19 @@
 .login-body {
-  background: linear-gradient(to right, #FF6B00, #FF6B00);
+  background: url("modern-urban-gym\ \(1\).jpg") center/cover ;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  /* #f36100 */
 }
 .login-box {
-  background: rgb(0, 0, 0);
+  background-color:rgba(0, 0, 0,0.7);
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 0 25px rgba(0,0,0,0.1);
   width: 100%;
   max-width: 400px;
-  color:white
+  color:white;
 }
 .login-box h2 {
   margin-bottom: 30px;
