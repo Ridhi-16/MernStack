@@ -1,0 +1,50 @@
+.login-body {
+  background: url("../../modern-urban-gym\ \(1\).jpg") center/cover ;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* #f36100 */
+}
+.login-box {
+  background-color:rgba(0, 0, 0,0.7);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  color:white;
+}
+.login-box h2 {
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-align: center;
+  color:white;
+}
+.form-control:focus {
+  border-color: #FF6B00;
+  box-shadow: none;
+}
+.login-btn {
+  background-color:#fb535b;
+  border-color:#ffc400;
+  width: 100%;
+  /* #ffc107  #f04e61*/
+}
+.login-btn:hover {
+  background-color: #ff0707;
+}
+.login a{
+  text-decoration: none;
+  color:white;
+}
+.register{
+  background-color:rgba(0, 0, 0,0.7);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 800px;
+  color:white;
+  
+}

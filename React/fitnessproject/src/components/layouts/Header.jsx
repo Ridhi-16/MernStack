@@ -94,9 +94,7 @@ export default function Header(){
               <li className={`nav item ${pathname=="/" && "active"}`} >
                 <Link to="/">Home</Link>
               </li>
-              <li className={`nav item ${pathname=="/" && "active"}`}>
-                <Link to="/about">About Us</Link>
-              </li>
+              
               <li className={`nav item ${pathname=="/" && "active"}`}>
                 <Link to="/classdetails">Classes</Link>
               </li>
@@ -132,9 +130,16 @@ export default function Header(){
                   </li>
                 </ul>
               </li>
-              <li className={`nav item ${pathname=="/" && "active"}`}>
+               <li className={`nav item ${pathname=="/" && "active"}`}>
                 <Link to="/contact">Contact</Link>
               </li>
+              <li className={`nav item ${pathname=="/" && "active"}`}>
+                    <Link to="/login">Login</Link>
+              </li>
+              
+             
+              
+               
             </ul>
           </nav>
         </div>
