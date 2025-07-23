@@ -17,7 +17,7 @@ import { Bounce, ToastContainer } from "react-toastify";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import TrainerRegister from "./components/auth/TrainerRegister";
-import Index from "./components/pages/Index";
+
 
 
 

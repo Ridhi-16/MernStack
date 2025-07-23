@@ -124,7 +124,7 @@ const handleForm=(data)=>{
              
               <div className="col-md-6 mb-3  "> 
                 <label  className="label mr-3">
-                  Goals 
+                  Specialization 
                 </label> 
                 <select name="goals" id="goal"   className="form-control">
                   <option value="select" disabled selected>Select</option>
@@ -134,14 +134,57 @@ const handleForm=(data)=>{
                   <option value="Training">Training</option>
                 </select>
               </div>
-              <div className="col-md-4  mb-3 pt-4 mt-3">
+              <div className="mb-3 col-md-6 ">
+                <label htmlFor="name" className="label">
+                  About
+                </label>
+                <input
+                  
+                  type="text"
+                  className="form-control"
+                  id="about"
+                  name="about"
+                  placeholder="About"
+                  required=""
+                  {...register("about", {
+                  required:{
+                    value:true,
+                    message:"About is required"
+                  }
+                })}
                 
-                  <span className="mr-2">Gender</span>
-                  <input type="radio" name="gender" className="mr-2"  value="male"    />
-                  <span className="mr-2">Male</span>
-                  <input type="radio" name="gender" className="mr-2"  value="female"  />
-                  <span>Female</span>
+                />
+                {errors?.about?.message}
               </div>
+              <div className="mb-3 col-md-6 ">
+                <label htmlFor="experience" className="label">
+                  Experience
+                </label>
+                <input
+                  
+                  type="text"
+                  className="form-control"
+                  id="experience"
+                  name="experience"
+                  placeholder="Experience"
+                  required=""
+                  {...register("experience", {
+                  required:{
+                    value:true,
+                    message:"Experience is required"
+                  }
+                })}
+                
+                />
+                {errors?.experience?.message}
+              </div>
+              <div className="col-md-6  mb-3   mt-2">
+                <label  className="label ">
+                  Profile
+                </label>
+                <input type="file" className="" />
+
+              </div> 
 
               <div className="text-center  login col-12">
                 <p>Terms & Conditions <input type="checkbox" name="" id="terms" /></p>
