@@ -16,7 +16,8 @@ import Layout from "./components/layouts/Layout";
 import { Bounce, ToastContainer } from "react-toastify";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
-import TrainerRegister from "./components/auth/TrainerRegister";
+import TrainerRegister from "./components/admin/trainer/TrainerRegister";
+import AdminLayout from "./components/layouts/AdminLayout";
 
 
 
@@ -37,14 +38,16 @@ function App(){
         <Route path="bmi" element={<Bmi/>}/>
         <Route path="classdetails" element={<ClassDetails/>}/>
         <Route path="classtimetable" element={<ClassTimetable/>}/>
-        <Route path="/contact" element={<Contact/>}/>
+        <Route path="contact" element={<Contact/>}/>
       </Route>
-      <Route path="/register" element={<Register/>}/>
+
+      <Route path="/admin" element={<AdminLayout/>}>
       
-
-      <Route path="/trainerregister" element={<TrainerRegister/>}/>
-
-      <Route path="/login" element={<Login/>}/>
+      </Route>
+       <Route path="register" element={<Register/>}/>
+       <Route path="trainerregister" element={<TrainerRegister/>}/>
+       <Route path="login" element={<Login/>}/>
+      
       
       <Route path="/*" element={<Error/>}/>
 

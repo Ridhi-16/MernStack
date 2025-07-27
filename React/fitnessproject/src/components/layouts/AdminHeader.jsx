@@ -1,8 +1,8 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import Swal from "sweetalert2";
+import { Link, useLocation, useNavigate } from "react-router-dom"
+import Swal from "sweetalert2"
 
 let {pathname}=useLocation
-export default function Header(){
+export default function AdminHeader(){
 
   let isLogin=sessionStorage.getItem("isLogin")
   let name=sessionStorage.getItem("name")
@@ -31,73 +31,7 @@ export default function Header(){
     return(
         <>
           <div className="offcanvas-menu-overlay" />
-  <div className="offcanvas-menu-wrapper">
-    <div className="canvas-close">
-      <i className="fa fa-close" />
-    </div>
-    <div className="canvas-search search-switch">
-      <i className="fa fa-search" />
-    </div>
-    <nav className="canvas-menu mobile-menu">
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-       
-        <li>
-          <Link to="/classdetails">Classes</Link>
-        </li>
-        <li>
-          <Link to="/services">Services</Link>
-        </li>
-       
-        <li>
-          <Link to="#">Pages</Link>
-          <ul className="dropdown">
-            <li>
-              <Link to="/about-us">About us</Link>
-            </li>
-            <li>
-              <Link to="/classtimetable">Classes timetable</Link>
-            </li>
-            <li>
-              <Link to="/bmi">Bmi calculate</Link>
-            </li>
-            <li>
-              <Link to="/team">Our team</Link>
-            </li>
-            <li>
-              <Link to="/gallery">Gallery</Link>
-            </li>
-            <li>
-              <Link to="/blog">Our blog</Link>
-            </li>
-            <li>
-              <Link to="/404">404</Link>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
-      </ul>
-    </nav>
-    <div id="mobile-menu-wrap" />
-    <div className="canvas-social">
-      <a href="#">
-        <i className="fa fa-facebook" />
-      </a>
-      <a href="#">
-        <i className="fa fa-twitter" />
-      </a>
-      <a href="#">
-        <i className="fa fa-youtube-play" />
-      </a>
-      <a href="#">
-        <i className="fa fa-instagram" />
-      </a>
-    </div>
-  </div>
+  
   {/* Offcanvas Menu Section End */}
   {/* Header Section Begin */}
   <header className="header-section">

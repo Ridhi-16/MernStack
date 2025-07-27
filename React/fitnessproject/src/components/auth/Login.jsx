@@ -1,3 +1,4 @@
+import axios from "axios"
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { toast } from "react-toastify"
@@ -13,21 +14,41 @@ export default function Login(){
 
     }
     const changePassword=(e)=>{
-        
         setPassword(e.target.value)
-
     }
+    
     const handleForm=(e)=>{
-        e.preventDefault()
-        if(email=="admin@gmail.com" && password=="2025"){
-            toast.success("login succesfully")
-            nav("/")
+    e.preventDefault()
+    let data={
+      email:email,
+      password:password
+    }
+    axios.post("http://localhost:1415/api/user/login", data)
+    .then((res)=>{
+      console.log(res);
+      if(res.data.success){
+        toast.success(res.data.message)
+        sessionStorage.setItem("isLogin", true)
+        
+        sessionStorage.setItem("token", res.data.token)
+        sessionStorage.setItem("name",res.data.data.name)
+        sessionStorage.setItem("email",res.data.data.email)
+        sessionStorage.setItem("userType",res.data.data.userType)
+        sessionStorage.setItem("userId",res.data.data._id)
+        if(res.data.data.userType==1){
+          nav("/admin")
         }
         else{
-            toast.error("invalid")
+          nav("/")
         }
-    }
-
+      }else{
+        toast.error(res.data.message)
+      }
+    })
+    .catch((err)=>{
+      toast.error(err.message)
+    })
+  }
     return(
         <>
         <div className="login-body">

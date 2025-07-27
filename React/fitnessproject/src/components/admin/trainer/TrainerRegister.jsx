@@ -1,12 +1,63 @@
+import axios from "axios";
+import { useRef } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export default function TrainerRegister(){
+  let nav=useNavigate()
 const {register,handleSubmit, reset, formState:{errors}}=useForm()
+ const fileRef = useRef(null);
+const handleForm=(data,)=>{
+   console.log(typeof data)
+   
+  const formData = new FormData();  
 
-const handleForm=(data)=>{
+  const file = fileRef.current?.files?.[0];
+  if (!file) {
+    toast.error("Please select a profile image");
+    return;
+  }
+  formData.append("profile", file);
+  
+  formData.append("name", data.name);
+  formData.append("about", data.about);
+  formData.append("email", data.email);
+  formData.append("password", data.password);
+  formData.append("contact", data.contact);
+  formData.append("experience", data.experience);
+  formData.append("specialization", data.specialization);
+  
+
+
     console.log("Form submit", data);
-    reset()
+    axios.post("http://localhost:1415/api/trainer/register",formData,{
+      headers: {
+          "Content-Type": "multipart/form-data",
+      }
+    })
+    .then((res)=>{
+          if(res.data.success){
+            toast.success(res.data.message)
+            sessionStorage.setItem("isLogin",true)
+             sessionStorage.setItem("token", res.data.token)
+              sessionStorage.setItem("name",res.data.data.name)
+              sessionStorage.setItem("email",res.data.data.email)
+              sessionStorage.setItem("userType",res.data.data.userType)
+              sessionStorage.setItem("userId",res.data.data._id)
+              if(res.data.data.userType==1){
+                nav("/admin")
+              }else{
+                nav("/")
+              }
+          }else{
+            toast.error(res.data.message)
+          }
+        })
+        .catch((err)=>{
+          toast.error(err.message)
+        })
+        
   }
   const handleError=(error)=>{
     console.log("err", error);
@@ -126,7 +177,14 @@ const handleForm=(data)=>{
                 <label  className="label mr-3">
                   Specialization 
                 </label> 
-                <select name="goals" id="goal"   className="form-control">
+                <select name="goals" id="goal"   className="form-control"
+                    {...register("specialization", {
+                      required:{
+                      value:true,
+                      message:"specialization is required"
+                    }
+                  })}
+                >
                   <option value="select" disabled selected>Select</option>
                   <option value="WeightLoss">WeightLoss</option>
                   <option value="WeightGain">WeightGain</option>
@@ -135,7 +193,7 @@ const handleForm=(data)=>{
                 </select>
               </div>
               <div className="mb-3 col-md-6 ">
-                <label htmlFor="name" className="label">
+                <label htmlFor="about" className="label">
                   About
                 </label>
                 <input
@@ -182,7 +240,13 @@ const handleForm=(data)=>{
                 <label  className="label ">
                   Profile
                 </label>
-                <input type="file" className="" />
+                <input type="file" className=""
+                name="profile"
+                ref={fileRef} 
+                
+
+
+                />
 
               </div> 
 
