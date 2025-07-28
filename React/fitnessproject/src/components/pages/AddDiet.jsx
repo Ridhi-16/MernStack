@@ -4,34 +4,30 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-export default function Register(){
+export default function AddDiet(){
   let nav=useNavigate()
   const{register,handleSubmit,reset,formState:{errors}}=useForm()
-  const fileRef=useRef(null)
+ 
   const handleForm=(data)=>{
     const formData=new FormData();
-    const file=fileRef.current.files[0];
-    formData.append("name",data.name);
-    formData.append("email",data.email);
-    formData.append("password",data.password);
-    formData.append("contact",data.contact);
-    formData.append("age",data.age);
-    formData.append("goal",data.goal);
-    formData.append("profile",file);
-    formData.append("gender",data.gender);
+   
+    formData.append("dietName",data.dietName);
+    formData.append("dietType",data.dietType);
+    formData.append("calorieIntake",data.calorieIntake);
+    formData.append("mealPlan",data.mealPlan);
+    formData.append("restrictions",data.restrictions);
+    formData.append("carbs",data.carbs);
+    formData.append("proteins",data.proteins);
+    formData.append("fats",data.fats);
 
     console.log("form Submitted",data);
-    axios.post("http://localhost:1415/api/member/register",formData,{
-      headers:{
-       " Content-Type":"multipart/form-data",
-      }
-    })
+    axios.post("http://localhost:1415/api/diet/add",formData)
     .then((res)=>{
       if(res.data.success){
         console.log(res.data)
         toast.success(res.data.message)
         sessionStorage.setItem("isLogin",true)
-        sessionStorage.setItem("name",res.data.name);
+        sessionStorage.setItem("Name",res.data.Name);
         sessionStorage.setItem("email",res.data.email);
         sessionStorage.setItem("token",res.data.token);
         sessionStorage.setItem("userType",res.data.userType);
@@ -65,82 +61,82 @@ export default function Register(){
             <h2>Signup to FitTrack</h2>
             <form action="" method="POST" className="row" onSubmit={handleSubmit(handleForm,handleError)}>
               <div className="mb-3 col-md-6 ">
-                <label htmlFor="name" className="label">
-                  Name
+                <label htmlFor="dietName" className="label">
+                  Diet Name
                 </label>
                 <input
                   type="text"
                   className="form-control"
-                  id="name"
-                  name="name"
-                  placeholder="Name"
+                  id="dietName"
+                  name="dietName"
+                  placeholder="dietName"
                   required=""
-                  {...register("name",{
+                  {...register("dietName",{
                     required:{
                       value:true,
-                      message:"name is req"
+                      message:"dietName is req"
                     }
                   })}
                 />
               </div>
               <div className="mb-3 col-md-6">
-                <label htmlFor="email" className="label">
-                  Email address
+                <label htmlFor="dietType" className="label">
+                  Diet type
                 </label>
                 <input
                 
-                  type="email"
+                  type="text"
                   className="form-control"
-                  id="email"
-                  name="email"
-                  placeholder="you@example.com"
+                  id="dietType"
+                  name="dietType"
+                  placeholder=""
                   required=""
-                  {...register("email",{
+                  {...register("dietType",{
                     required:{
                       value:true,
-                      message:"email is req"
+                      message:"dietType is req"
                     }
                   })}
                 />
               </div>
               <div className="mb-3 col-md-6">
-                <label htmlFor="Contact" className="label">
-                  Contact
+                <label htmlFor="calorieIntake" className="label">
+                 Calorie Intake
                 </label>
                 <input
     
                 maxLength={10}
                 minLength={10}
-                  type="tel"
+                  type="number"
                   className="form-control"
-                  id="Contact"
-                  name="Contact"
-                  placeholder="Enter Contact"
+                  id="calorieIntake"
+                  name="calorieIntake"
+                  placeholder="Enter calorieIntake"
                   required=""
-                  {...register("contact",{
+                  {...register("calorieIntake",{
                     required:{
                       value:true,
-                      message:"contact is req"
+                      message:"calorieIntake is req"
                     }
                   })}
                 />
               </div>
               <div className="mb-3 col-md-6">
-                <label htmlFor="password" className="label">
-                  Password
+                <label htmlFor="restrictions" className="label">
+                  Restrictions
                 </label>
                 <input
              
-                  type="password"
+                  type="text"
                   className="form-control"
-                  id="password"
-                  name="password"
-                  placeholder="Enter password"
+                  id="restrictions"
+                  name="restrictions"
+                  placeholder="Enter restrictions"
                   required=""
-                  {...register("password",{
+                  {...register("restrictions",{
                     required:{
                       value:true,
-                      message:"password is req"
+                      message:"restrictions is req"
                     }
                   })}
                 />
@@ -148,74 +144,82 @@ export default function Register(){
              
               <div className="col-md-6 mb-3  "> 
                 <label  className="label mr-3">
-                  Goals 
+                  Meal Plan 
                 </label> 
-                <select name="goal" id="goal"  className="form-control"
-                {...register("goal",{
+                <select name="mealPlan" id="mealPlan"  className="form-control"
+                {...register("mealPlan",{
                     required:{
                       value:true,
-                      message:"goal is req"
+                      message:"mealPlan is req"
                     }
                   })}
                   >
                   <option value="select" disabled selected>Select</option>
-                  <option value="WeightLoss">WeightLoss</option>
-                  <option value="WeightGain">WeightGain</option>
-                  <option value="Bodyshape">Bodyshape</option>
-                  <option value="Training">Training</option>
+                  <option value="Breakfast">Breakfast</option>
+                  <option value="Lunch">Lunch</option>
+                  <option value="Dinner">Dinner</option>
+                  
                 </select>
               </div>
 
-               <div className="col-md-6  mb-3   mt-2">
-                <label  className="label ">
-                  Profile
-                </label>
-                <input type="file" className=""
-                ref={fileRef}
-                 />
-
-              </div>
+               
               <div className="mb-3 col-md-6">
-                <label htmlFor="age" className="label">
-                  Age
+                <label htmlFor="protein" className="label">
+                  Protein
                 </label>
                 <input
-    
-               
                   type="number"
                   className="form-control"
-                  id="age"
-                  name="age"
-                  placeholder="Enter Age"
+                  id="protein"
+                  name="protein"
+                  placeholder=""
                   required=""
-                  {...register("age",{
+                  {...register("protein",{
                     required:{
                       value:true,
-                      message:"age is req"
+                      message:"protein is req"
                     }
                   })}
                 />
               </div> 
-              <div className="col-md-4 mb-3 mt-5">
-                
-                  <span className="mr-2">Gender</span>
-                  <input type="radio" name="gender" className="mr-2"  value="male"  
-                  {...register("gender",{
+              <div className="mb-3 col-md-6">
+                <label htmlFor="carbs" className="label">
+                  Carbs
+                </label>
+                <input
+                  type="number"
+                  className="form-control"
+                  id="carbs"
+                  name="carbs"
+                  placeholder=""
+                  required=""
+                  {...register("carbs",{
                     required:{
                       value:true,
-                      message:"gender is req"
+                      message:"carbs is req"
                     }
-                  })} />
-                  <span className="mr-2">Male</span>
-                  <input type="radio" name="gender" className="mr-2"  value="female"  
-                  {...register("gender",{
+                  })}
+                />
+              </div> 
+              <div className="mb-3 col-md-6">
+                <label htmlFor="fats" className="label">
+                  Fats
+                </label>
+                <input
+                  type="number"
+                  className="form-control"
+                  id="fats"
+                  name="fats"
+                  placeholder=""
+                  required=""
+                  {...register("fats",{
                     required:{
                       value:true,
-                      message:"gender is req"
+                      message:"fats is req"
                     }
-                  })}  />
-                  <span>Female</span>
-              </div>
+                  })}
+                />
+              </div> 
 
              
 
