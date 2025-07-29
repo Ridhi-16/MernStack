@@ -7,43 +7,44 @@ import { toast } from "react-toastify";
 export default function Register(){
   let nav=useNavigate()
   const{register,handleSubmit,reset,formState:{errors}}=useForm()
-  const fileRef=useRef(null)
+ 
   const handleForm=(data)=>{
     const formData=new FormData();
-    const file=fileRef.current.files[0];
-    formData.append("name",data.name);
-    formData.append("email",data.email);
-    formData.append("password",data.password);
-    formData.append("contact",data.contact);
-    formData.append("age",data.age);
-    formData.append("goal",data.goal);
+    const file=data?.memberDataprofile[0];
+    formData.append("name",data?.memberDataname);
+    formData.append("email",data?.memberDataemail);
+    formData.append("password",data?.memberDatapassword);
+    formData.append("contact",data?.memberDatacontact);
+    formData.append("age",data?.memberDataage);
+    formData.append("goal",data?.memberDatagoal);
     formData.append("profile",file);
-    formData.append("gender",data.gender);
+    formData.append("gender",data?.memberDatagender);
 
     console.log("form Submitted",data);
-    axios.post("http://localhost:1415/api/member/register",formData,{
-      headers:{
-       " Content-Type":"multipart/form-data",
-      }
-    })
+    axios.post("http://localhost:1415/api/member/register",formData)
     .then((res)=>{
+      console.log(res)
+      
       if(res.data.success){
-        console.log(res.data)
+          let login={
+          email:data.email,
+        
+          password:data.password
+      }
+      axios.post("http://localhost:1415/api/user/login", login)
+    
+      console.log(res);
         toast.success(res.data.message)
-        sessionStorage.setItem("isLogin",true)
-        sessionStorage.setItem("name",res.data.name);
-        sessionStorage.setItem("email",res.data.email);
-        sessionStorage.setItem("token",res.data.token);
-        sessionStorage.setItem("userType",res.data.userType);
-        sessionStorage.setitem("userId",res.data.data._id)
-        if(res.data.userType==3){
-          nav("/")
-        }
-      }
-      else{
-        toast.error(res.data.message)
-      }
+        sessionStorage.setItem("isLogin", true)
+        
+        sessionStorage.setItem("token", res.data.token)
+        sessionStorage.setItem("name",res.data.data.name)
+        sessionStorage.setItem("email",res.data.data.email)
+        sessionStorage.setItem("userType",res.data.data.userType)
+        sessionStorage.setItem("userId",res.data.data._id)
+        console.log(res.data)
 
+      }
     })
     .catch((err)=>{
       toast.error(err.message);
@@ -171,7 +172,7 @@ export default function Register(){
                   Profile
                 </label>
                 <input type="file" className=""
-                ref={fileRef}
+                {...register("profile")}
                  />
 
               </div>
