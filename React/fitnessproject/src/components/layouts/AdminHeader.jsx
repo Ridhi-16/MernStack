@@ -16,7 +16,7 @@ export default function AdminHeader(){
           confirmButtonColor: "#3085d6",
           cancelButtonColor: "#d33",
           confirmButtonText: "Yes, Logout!"
-        }).then((result) => {
+          }).then((result) => {
         if (result.isConfirmed) {
             sessionStorage.clear()
             nav("/login")
@@ -52,7 +52,15 @@ export default function AdminHeader(){
               </li>
               
               <li className={`nav item ${pathname=="/" && "active"}`}>
-                <Link to="/classdetails">Classes</Link>
+                <Link to="#">Trainer</Link>
+                <ul className="dropdown">
+                  <li className={`nav item ${pathname=="/" && "active"}`}>
+                    <Link to="/admin/trainer/manage">Manage trainer</Link>
+                  </li>
+                  <li className={`nav item ${pathname=="/" && "active"}`}>
+                    <Link to="/admin/trainer/register">Add trainer</Link>
+                  </li>
+                </ul>
               </li>
               <li className={`nav item ${pathname=="/" && "active"}`}>
                 <Link to="/services">Services</Link>

@@ -10,30 +10,31 @@ export default function Register(){
  
   const handleForm=(data)=>{
     const formData=new FormData();
-    const file=data?.memberDataprofile[0];
-    formData.append("name",data?.memberDataname);
-    formData.append("email",data?.memberDataemail);
-    formData.append("password",data?.memberDatapassword);
-    formData.append("contact",data?.memberDatacontact);
-    formData.append("age",data?.memberDataage);
-    formData.append("goal",data?.memberDatagoal);
+    const file=data?.profile?.[0];
+    formData.append("name",data?.name);
+    formData.append("email",data?.email);
+    formData.append("password",data?.password);
+    formData.append("contact",data?.contact);
+    formData.append("age",data?.age);
+    formData.append("goal",data?.goal);
     formData.append("profile",file);
-    formData.append("gender",data?.memberDatagender);
+    formData.append("gender",data?.gender);
 
-    console.log("form Submitted",data);
+    // console.log("form Submitted",data);
     axios.post("http://localhost:1415/api/member/register",formData)
     .then((res)=>{
       console.log(res)
       
       if(res.data.success){
           let login={
-          email:data.email,
-        
-          password:data.password
-      }
-      axios.post("http://localhost:1415/api/user/login", login)
-    
+              email:data.email,
+            
+              password:data.password
+          }
+       axios.post("http://localhost:1415/api/user/login", login)
+    .then((res)=>{
       console.log(res);
+      if(res.data.success){
         toast.success(res.data.message)
         sessionStorage.setItem("isLogin", true)
         
@@ -42,22 +43,31 @@ export default function Register(){
         sessionStorage.setItem("email",res.data.data.email)
         sessionStorage.setItem("userType",res.data.data.userType)
         sessionStorage.setItem("userId",res.data.data._id)
-        console.log(res.data)
-
+        if(res.data.data.userType==1){
+          nav("/admin")
+        }
+        else{
+          nav("/")
+        }
+      }else{
+        toast.error(res.data.message)
+      }
+    })
+    .catch((err)=>{
+      toast.error(err.message)
+    })
       }
     })
     .catch((err)=>{
       toast.error(err.message);
-
-    })
-
-  }
-   const handleError=(error)=>{
-    console.log("err", error);
-    
+    })    
   }
 
 
+
+const handleError=(error)=>{
+ console.log("err", error);
+}
   
     return(
         <>
@@ -239,4 +249,4 @@ export default function Register(){
 
         </>
     )
-}
+  }

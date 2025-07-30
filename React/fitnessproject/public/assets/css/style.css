@@ -1642,7 +1642,8 @@ ol {
 
 .class-timetable table tbody tr td {
 	width: 146px;
-	padding: 35px 0;
+	padding: 15px 0;
+	
 }
 
 .class-timetable table tbody tr td.class-time {

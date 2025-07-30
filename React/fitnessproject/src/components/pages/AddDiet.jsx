@@ -10,28 +10,29 @@ export default function AddDiet(){
  
   const handleForm=(data)=>{
     const formData=new FormData();
-   
+    let userId=sessionStorage.getItem("userId")
+    formData.append("userId",userId)
     formData.append("dietName",data.dietName);
     formData.append("dietType",data.dietType);
     formData.append("calorieIntake",data.calorieIntake);
     formData.append("mealPlan",data.mealPlan);
     formData.append("restrictions",data.restrictions);
     formData.append("carbs",data.carbs);
-    formData.append("proteins",data.proteins);
+    formData.append("protein",data.protein);
     formData.append("fats",data.fats);
 
-    console.log("form Submitted",data);
-    axios.post("http://localhost:1415/api/diet/add",formData)
+    console.log("form Submitted",formData);
+    let token=sessionStorage.getItem("token")
+   
+
+    let headers={
+                Authorization:token
+        }
+    axios.post("http://localhost:1415/trainer/diet/add",data,{headers:headers})
     .then((res)=>{
+      console.log(res)
       if(res.data.success){
         console.log(res.data)
-        toast.success(res.data.message)
-        sessionStorage.setItem("isLogin",true)
-        sessionStorage.setItem("Name",res.data.Name);
-        sessionStorage.setItem("email",res.data.email);
-        sessionStorage.setItem("token",res.data.token);
-        sessionStorage.setItem("userType",res.data.userType);
-        sessionStorage.setitem("userId",res.data.data._id)
         if(res.data.userType==3){
           nav("/")
         }

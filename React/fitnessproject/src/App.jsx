@@ -19,6 +19,7 @@ import Login from "./components/auth/Login";
 import TrainerRegister from "./components/admin/trainer/TrainerRegister";
 import AdminLayout from "./components/layouts/AdminLayout";
 import AddDiet from "./components/pages/AddDiet";
+import ManageTrainer from "./components/admin/trainer/ManageTrainer";
 
 
 
@@ -43,10 +44,12 @@ function App(){
       </Route>
 
       <Route path="/admin" element={<AdminLayout/>}>
+       <Route path="trainer/register" element={<TrainerRegister/>}/>
+       <Route path="trainer/manage" element={<ManageTrainer/>}/>
+
       
       </Route>
        <Route path="register" element={<Register/>}/>
-       <Route path="trainerregister" element={<TrainerRegister/>}/>
        <Route path="login" element={<Login/>}/>
        <Route path="addDiet" element={<AddDiet/>}/>
 
