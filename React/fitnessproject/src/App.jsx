@@ -18,8 +18,10 @@ import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import TrainerRegister from "./components/admin/trainer/TrainerRegister";
 import AdminLayout from "./components/layouts/AdminLayout";
-import AddDiet from "./components/pages/AddDiet";
 import ManageTrainer from "./components/admin/trainer/ManageTrainer";
+import AddDiet from "./components/trainer/diet/AddDiet";
+import AddCategory from "c:/Users/HP/Downloads/AddCategory";
+import AddBatch from "./components/pages/AddBatch";
 
 
 
@@ -46,12 +48,15 @@ function App(){
       <Route path="/admin" element={<AdminLayout/>}>
        <Route path="trainer/register" element={<TrainerRegister/>}/>
        <Route path="trainer/manage" element={<ManageTrainer/>}/>
-
-      
+       <Route path="addBatch" element={<AddBatch/>}/>
       </Route>
+      
+       <Route path="category" element={<AddCategory/>}/>
+      
        <Route path="register" element={<Register/>}/>
        <Route path="login" element={<Login/>}/>
        <Route path="addDiet" element={<AddDiet/>}/>
+       <Route path="addBatch" element={<AddBatch/>}/>
 
       
       

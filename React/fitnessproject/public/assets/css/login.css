@@ -31,6 +31,14 @@
   width: 100%;
   /* #ffc107  #f04e61*/
 }
+.submit-btn {
+  background-color:#f36100;
+  border-color:#ff0000;
+  width: 100%;
+  /* #ffc107  #f04e61*/
+}
+
+
 .login-btn:hover {
   background-color: #ff0707;
 }
@@ -47,4 +55,28 @@
   max-width: 800px;
   color:white;
   
+}
+.add{
+  background-color:rgba(0, 0, 0,0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 800px;
+  color:white;
+  
+}
+.add-body{
+  background-color:black;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.add-box {
+  margin-top:110px;
+  background-color:rgb(255, 255, 255);
+  color:rgb(0, 0, 0);
+  margin-bottom:30px;
 }

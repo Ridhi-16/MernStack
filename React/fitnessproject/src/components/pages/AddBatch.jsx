@@ -21,17 +21,12 @@ export default function AddBatch(){
     formData.append("fats",data.fats);
 
     console.log("form Submitted",data);
-    axios.post("http://localhost:1415/api/diet/add",formData)
+    axios.post("http://localhost:1415/api/batch/add",formData)
     .then((res)=>{
       if(res.data.success){
         console.log(res.data)
         toast.success(res.data.message)
-        sessionStorage.setItem("isLogin",true)
-        sessionStorage.setItem("Name",res.data.Name);
-        sessionStorage.setItem("email",res.data.email);
-        sessionStorage.setItem("token",res.data.token);
-        sessionStorage.setItem("userType",res.data.userType);
-        sessionStorage.setitem("userId",res.data.data._id)
+        
         if(res.data.userType==3){
           nav("/")
         }
@@ -56,10 +51,10 @@ export default function AddBatch(){
   
     return(
         <>
-        <div className="login-body">
-          <div className="login-box container register">
-            <h2>Signup to FitTrack</h2>
-            <form action="" method="POST" className="row" onSubmit={handleSubmit(handleForm,handleError)}>
+        <div className="add-body  " >
+          <div className=" add-box login-box  container  add  ">
+            <h2 className="text-dark">ADD BATCH</h2>
+            <form action="" method="POST" className="row " onSubmit={handleSubmit(handleForm,handleError)}>
               <div className="mb-3 col-md-6 ">
                 <label htmlFor="batchName" className="label">
                   Batch Name
@@ -81,7 +76,7 @@ export default function AddBatch(){
               </div>
               <div className="mb-3 col-md-6">
                 <label htmlFor="startDate" className="label">
-                  Diet type
+                  Start Date
                 </label>
                 <input
                 
@@ -101,7 +96,7 @@ export default function AddBatch(){
               </div>
               <div className="mb-3 col-md-6">
                 <label htmlFor="noOfSlots" className="label">
-                 Calorie Intake
+                 No Of Slots
                 </label>
                 <input
     
@@ -121,7 +116,7 @@ export default function AddBatch(){
               </div>
               <div className="mb-3 col-md-6">
                 <label htmlFor="session" className="label">
-                  Restrictions
+                 Session
                 </label>
                 <input
              
@@ -163,7 +158,7 @@ export default function AddBatch(){
                
               <div className="mb-3 col-md-6">
                 <label htmlFor="fees" className="label">
-                  Protein
+                 Fees
                 </label>
                 <input
                   type="number"
@@ -180,58 +175,12 @@ export default function AddBatch(){
                   })}
                 />
               </div> 
-              <div className="mb-3 col-md-6">
-                <label htmlFor="carbs" className="label">
-                  Carbs
-                </label>
-                <input
-                  type="number"
-                  className="form-control"
-                  id="carbs"
-                  name="carbs"
-                  placeholder=""
-                  required=""
-                  {...register("carbs",{
-                    required:{
-                      value:true,
-                      message:"carbs is req"
-                    }
-                  })}
-                />
-              </div> 
-              <div className="mb-3 col-md-6">
-                <label htmlFor="fats" className="label">
-                  Fats
-                </label>
-                <input
-                  type="number"
-                  className="form-control"
-                  id="fats"
-                  name="fats"
-                  placeholder=""
-                  required=""
-                  {...register("fats",{
-                    required:{
-                      value:true,
-                      message:"fats is req"
-                    }
-                  })}
-                />
-              </div> 
-
-             
-
-              <div className="text-center  login col-12">
-                <p>Terms & Conditions <input type="checkbox" name="" id="terms"  /></p>
-              </div>
+               
 
               <div className="col-6 mx-auto" >
-                  <button type="submit" className="btn btn-success login-btn">
+                  <button type="submit" className="btn btn-success submit-btn">
                     Submit
                   </button>
-              </div>
-              <div className="text-center mt-3 login col-12">
-                <a href="#">Already have a account</a> |<Link to="/login" className="ml-1 text-danger">Sign in</Link>
               </div>
             </form>
           </div>

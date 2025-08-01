@@ -3,21 +3,19 @@ import { useRef } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import ApiService from "../../services/ApiService";
 
 export default function TrainerRegister(){
   let nav=useNavigate()
 const {register,handleSubmit, reset, formState:{errors}}=useForm()
- const fileRef = useRef(null);
+ 
 const handleForm=(data,)=>{
    console.log(typeof data)
    
   const formData = new FormData();  
 
-  const file = fileRef.current?.files?.[0];
-  if (!file) {
-    toast.error("Please select a profile image");
-    return;
-  }
+  const file = data?.profile?.[0];
+ 
   formData.append("profile", file);
   
   formData.append("name", data.name);
@@ -31,11 +29,7 @@ const handleForm=(data,)=>{
 
 
     console.log("Form submit", data);
-    axios.post("http://localhost:1415/api/trainer/register",formData,{
-      headers: {
-          "Content-Type": "multipart/form-data",
-      }
-    })
+    ApiService.trainerRegister(data)
     .then((res)=>{
           if(res.data.success){
             toast.success(res.data.message)

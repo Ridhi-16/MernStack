@@ -2,6 +2,7 @@ import axios from "axios"
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { toast } from "react-toastify"
+import ApiService from "../services/ApiService"
 
 export default function Login(){
     let nav=useNavigate()
@@ -23,7 +24,7 @@ export default function Login(){
       email:email,
       password:password
     }
-    axios.post("http://localhost:1415/api/user/login", data)
+    ApiService.login(data)
     .then((res)=>{
       console.log(res);
       if(res.data.success){
