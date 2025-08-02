@@ -15,16 +15,26 @@ class ApiServices{
         return axios.post(BASEURL+"/api/member/register", data)
     }
     trainerRegister(data){
-        return axios.post(BASEURL+"/admin/trainer/register", data )
+        return axios.post(BASEURL+"/api/trainer/register", data ,{headers:this.getToken()})
     }
     allTrainer(data){
         return axios.post(BASEURL+"/api/trainer/all", data )
     }
-    changeStatusCategory(data){
+    changeStatusTrainer(data){
         return axios.post(BASEURL+"/admin/trainer/changeStatus", data, {headers:this.getToken()})
+    }
+    changeStatusDiet(data){
+        return axios.post(BASEURL+"/admin/diet/changeStatus", data, {headers:this.getToken()})
     }
     addDiet(data){
         return axios.post(BASEURL+ "/trainer/diet/add",data,{headers:this.getToken()})
+
+    }
+    allDiet(data){
+        return axios.post(BASEURL+"/api/diet/all", data )
+    }
+    addBatch(data){
+        return axios.post(BASEURL+"/admin/batch/add",data,{headers:this.getToken()})
     }
     
 }

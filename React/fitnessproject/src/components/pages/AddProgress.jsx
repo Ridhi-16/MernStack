@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -8,32 +8,9 @@ import ApiService from "../services/ApiService";
 export default function AddBatch(){
   let nav=useNavigate()
   const{register,handleSubmit,reset,formState:{errors}}=useForm()
-  const [trainerId, setTrainerId]=useState("")
-  const [trainer,setTrainer]=useState([])
-  console.log("trainerdata",trainer);
  
-  const fetchData=()=>{
-            
-            axios.post("http://localhost:1415/api/trainer/all")
-            .then((res)=>{
-                // console.log("trainerdata",res)
-                if(res.data.success){
-                  
-                  setTrainer(res.data.data)
-                  console.log("trainerdata",{trainer});
-                }else{
-                    toast.error(res.data.message)
-                }
-            })
-            .catch((err)=>{
-                toast.error(err.message)
-            })
-        }
-  useEffect(()=>{
-    fetchData()
-  },[])
-  
   const handleForm=(data)=>{
+    
 
     console.log("form Submitted",data);
     ApiService.addBatch(data)
@@ -194,17 +171,6 @@ export default function AddBatch(){
                   })}
                 />
               </div> 
-              <div className="col-md-6 mb-3">
-                <label htmlFor="">Trainer</label>
-                <select value={trainerId} onChange={(e)=>{setTrainerId(e.target.value)}}>
-                <option value={""} disabled selected>Choose one</option>
-                {trainer?.map((el,index)=>(
-                
-                <option key={index} value={el?._id}>{el?.name}</option>
-          
-                ))}
-              </select>
-              </div>
                
 
               <div className="col-6 mx-auto" >

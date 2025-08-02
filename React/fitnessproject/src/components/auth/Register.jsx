@@ -20,10 +20,10 @@ export default function Register(){
     formData.append("profile",file);
     formData.append("gender",data?.gender);
 
-    // console.log("form Submitted",data);
+     console.log("form Submitted",formData);
     axios.post("http://localhost:1415/api/member/register",formData)
     .then((res)=>{
-      console.log(res)
+      //console.log(res)
       
       if(res.data.success){
           let login={
@@ -39,7 +39,7 @@ export default function Register(){
         sessionStorage.setItem("isLogin", true)
         
         sessionStorage.setItem("token", res.data.token)
-        sessionStorage.setItem("name",res.data.data.name)
+        sessionStorage.setItem("name",res.data.data.userData.name)
         sessionStorage.setItem("email",res.data.data.email)
         sessionStorage.setItem("userType",res.data.data.userType)
         sessionStorage.setItem("userId",res.data.data._id)
@@ -199,6 +199,8 @@ const handleError=(error)=>{
                   name="age"
                   placeholder="Enter Age"
                   required=""
+                  minLength={1}
+                  maxLength={3}
                   {...register("age",{
                     required:{
                       value:true,

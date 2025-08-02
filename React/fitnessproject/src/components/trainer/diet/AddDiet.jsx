@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import ApiService from "../../services/ApiService";
 
 export default function AddDiet(){
   let nav=useNavigate()
@@ -32,7 +33,7 @@ export default function AddDiet(){
     let headers={
          Authorization:token
     }
-    axios.post("http://localhost:1415/trainer/diet/add",Data,{headers:headers})
+    ApiService.addDiet(Data)
     .then((res)=>{
       console.log(res)
       if(res.data.success){
@@ -62,32 +63,11 @@ export default function AddDiet(){
   
     return(
      <>
-     <section
-    className="breadcrumb-section set-bg"
-    data-setbg="/assets/img/breadcrumb-bg.jpg"
-    style={{background:'url("/assets/img/breadcrumb-bg.jpg")'}}
-  >
-    <div className="container">
-      <div className="row">
-        <div className="col-lg-12 text-center">
-          <div className="breadcrumb-text">
-            <h2>BMI calculator</h2>
-            <div className="bt-option">
-              <a href="./index.html">Home</a>
-              <a href="#">Pages</a>
-              <span>BMI calculator</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-     <div className="div spad bmi-calculator-section" >
-          <div className="container "  >
-            <div className="row justify-content-center" >
-              <div className="col-md-10 p-5" style={{boxShadow:"0px 0px 10px ",backgroundColor:"rgb(250,250,250)"}} >
-                <div className="row">
-                  <div className="mb-3 col-md-6 ">
+     <div className="add-body  " >
+          <div className=" add-box login-box  container  add  ">
+            <h2 className="text-dark">ADD Diet</h2>
+            <form action="" method="POST" className="row " onSubmit={handleSubmit(handleForm,handleError)}>
+              <div className="mb-3 col-md-6 ">
                 <label htmlFor="dietName" className="label">
                   Diet Name
                 </label>
@@ -105,8 +85,9 @@ export default function AddDiet(){
                     }
                   })}
                 />
-                </div>
-                <div className="mb-3 col-md-6">
+              </div>
+
+              <div className="mb-3 col-md-6">
                   <label htmlFor="dietType" className="label">
                     Diet type
                   </label>
@@ -125,10 +106,9 @@ export default function AddDiet(){
                       }
                     })}
                   />
-                </div>
-                </div>
-                <div className="row">
-                  <div className="mb-3 col-md-6">
+              </div>
+                
+              <div className="mb-3 col-md-6">
                   <label htmlFor="calorieIntake" className="label">
                   Calorie Intake
                   </label>
@@ -149,8 +129,9 @@ export default function AddDiet(){
                       }
                     })}
                   />
-                </div>
-                <div className="mb-3 col-md-6">
+              </div>
+
+              <div className="mb-3 col-md-6">
                   <label htmlFor="restrictions" className="label">
                     Restrictions
                   </label>
@@ -169,11 +150,9 @@ export default function AddDiet(){
                       }
                     })}
                   />
-                </div>
-                </div>
-              
-                <div className="row">
-                  <div className="mb-3 col-md-6">
+              </div>
+                
+              <div className="mb-3 col-md-6">
                   <label htmlFor="protein" className="label">
                     Protein
                   </label>
@@ -191,8 +170,9 @@ export default function AddDiet(){
                       }
                     })}
                   />
-                </div> 
-                <div className="mb-3 col-md-6">
+              </div> 
+
+              <div className="mb-3 col-md-6">
                   <label htmlFor="carbs" className="label">
                     Carbs
                   </label>
@@ -210,10 +190,9 @@ export default function AddDiet(){
                       }
                     })}
                   />
-                </div> 
-                </div>
-               <div className="row">
-                 <div className="col-md-6 mb-3  "> 
+              </div> 
+               
+              <div className="col-md-6 mb-3  "> 
                   <label  className="label mr-3">
                     Meal Plan 
                   </label> 
@@ -231,9 +210,10 @@ export default function AddDiet(){
                     <option value="Dinner">Dinner</option>
                     
                   </select>
-                </div>
-                 <div className="mb-3 col-md-6">
-                  <label htmlFor="fats" className="label">
+              </div>
+
+              <div className="mb-3 col-md-6">
+                <label htmlFor="fats" className="label">
                     Fats
                   </label>
                   <input
@@ -250,36 +230,22 @@ export default function AddDiet(){
                       }
                     })}
                   />
-                </div>
-                </div> 
-
-             
-
-              <div className="text-center  login col-12">
-                <p>Terms & Conditions <input type="checkbox" name="" id="terms"  /></p>
               </div>
 
+  
+              
               <div className="col-6 mx-auto" >
-                  <button type="submit" className="btn btn-secondary w-100">
+                  <button type="submit" className="btn btn-success submit-btn">
                     Submit
                   </button>
               </div>
-              
-
-              </div>
-              {/* <div className="col-md-5 d-flex align-items-stretch">
-                <div
-                  className="info-wrap w-100 p-5 img"
-                  style={{ backgroundImage: "url(/assets/images/img.jpg)" }}
-                ></div>
-              </div> */}
-            </div>
+            </form>
           </div>
-     </div>
+        </div>
+     
             
       </>
     )
     
   }
-
-  
+                    
