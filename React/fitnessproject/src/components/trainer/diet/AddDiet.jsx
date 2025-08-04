@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import ApiService from "../../services/ApiService";
+// import Input from "../../pages/Input";
 
 export default function AddDiet(){
   let nav=useNavigate()
@@ -231,6 +232,7 @@ export default function AddDiet(){
                     })}
                   />
               </div>
+              {/* <Input/> */}
 
   
               

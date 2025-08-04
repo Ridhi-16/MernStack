@@ -39,9 +39,13 @@ export default function Login(){
         if(res.data.data.userType==1){
           nav("/admin")
         }
+        else if(res.data.data.userType==2){
+          nav("/trainer")
+        }
         else{
           nav("/")
         }
+
       }else{
         toast.error(res.data.message)
       }
@@ -90,7 +94,8 @@ export default function Login(){
                     </button>
                 </div>
                 <div className="text-center mt-3 login">
-                    <a href="#">Forgot password?</a> | <Link to="/register">Sign up</Link>
+                    <a href="#">Forgot password?</a> | <Link to="/register">Sign up</Link > | <Link to="/admin/trainer/register">Trainer</Link>
+                  
                 </div>
                 </form>
             </div>

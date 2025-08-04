@@ -62,9 +62,24 @@ export default function AdminHeader(){
                   </li>
                 </ul>
               </li>
+
+              <li className={`nav item ${pathname=="/" && "active"}`}>
+                <Link to="#">Batch</Link>
+                <ul className="dropdown">
+                  <li className={`nav item ${pathname=="/" && "active"}`}>
+                    <Link to="/admin/batch/add">Add Batch</Link>
+                  </li>
+                  <li className={`nav item ${pathname=="/" && "active"}`}>
+                    <Link to="/admin/batch/manage">Manage Batch</Link>
+                  </li>
+                </ul>
+              </li>
+
+
               <li className={`nav item ${pathname=="/" && "active"}`}>
                 <Link to="/services">Services</Link>
               </li>
+              
               
               <li className={`nav item ${pathname=="/" && "active"}`}>
                 <Link to="#">Pages</Link>

@@ -18,7 +18,7 @@ class ApiServices{
         return axios.post(BASEURL+"/api/trainer/register", data ,{headers:this.getToken()})
     }
     allTrainer(data){
-        return axios.post(BASEURL+"/api/trainer/all", data )
+        return axios.post(BASEURL+"/api/trainer/all",data )
     }
     changeStatusTrainer(data){
         return axios.post(BASEURL+"/admin/trainer/changeStatus", data, {headers:this.getToken()})

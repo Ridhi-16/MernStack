@@ -156,7 +156,7 @@ export default function ManageDiet(){
                            <h5> {el?.status?"Active":"In-active"}</h5>
                         </td>
                         <td className="dark-bg hover-bg">
-                          <button><Switch
+                          <button className="btn"><Switch
                            checked={el?.status}
                            onChange={()=>{
                             changeStatus(el?._id, el?.status)

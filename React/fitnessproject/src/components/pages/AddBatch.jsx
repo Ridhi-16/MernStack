@@ -34,7 +34,7 @@ export default function AddBatch(){
   },[])
   
   const handleForm=(data)=>{
-
+    data.trainerId=trainerId
     console.log("form Submitted",data);
     ApiService.addBatch(data)
     .then((res)=>{
@@ -200,7 +200,7 @@ export default function AddBatch(){
                 <option value={""} disabled selected>Choose one</option>
                 {trainer?.map((el,index)=>(
                 
-                <option key={index} value={el?._id}>{el?.name}</option>
+                <option key={index} value={el?._id}>{el?.userId?.name}</option>
           
                 ))}
               </select>

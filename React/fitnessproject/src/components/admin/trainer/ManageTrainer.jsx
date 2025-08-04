@@ -3,15 +3,17 @@ import { useEffect, useState } from "react"
 import Switch from "react-switch"
 import { toast } from "react-toastify"
 import Swal from "sweetalert2"
+import ApiService from "../../services/ApiService"
+import { Link } from "react-router-dom"
 
 export default function ManageTrainer(){
     const[trainers,setTrainers]=useState([])
 
     const fetchData=()=>{
-        axios.post("http://localhost:1415/api/trainer/all")
+        ApiService.allTrainer()
         .then((res)=>{
             console.log(res)
-            if(res.data.sucess){
+            if(res.data.success){
                 setTrainers(res.data.data)
 
             }
@@ -47,7 +49,7 @@ export default function ManageTrainer(){
           let headers={
             Authorization:token
           }
-          axios.post("http://localhost:1415/admin/trainer/changeStatus",data,{headers:headers})
+          ApiService.changeStatusTrainer(data)
           .then((res)=>{
             if(res.data.success){
             Swal.fire({
@@ -152,6 +154,7 @@ export default function ManageTrainer(){
                             changeStatus(el?.userId?._id, el?.status)
                            }}
                           /></button>
+                          <Link className="btn" ><i className="bi bi-pencil-square" ></i></Link>
                         </td>
 
 

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useRef } from "react";
+
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -10,14 +10,13 @@ export default function TrainerRegister(){
 const {register,handleSubmit, reset, formState:{errors}}=useForm()
  
 const handleForm=(data,)=>{
-   console.log(typeof data)
+   
    
   const formData = new FormData();  
 
-  const file = data?.profile?.[0];
+  const file= data?.profile?.[0];
  
   formData.append("profile", file);
-  
   formData.append("name", data.name);
   formData.append("about", data.about);
   formData.append("email", data.email);
@@ -28,19 +27,20 @@ const handleForm=(data,)=>{
   
 
 
-    console.log("Form submit", data);
-    ApiService.trainerRegister(data)
+    // console.log("Form submit", data);
+    ApiService.trainerRegister(formData)
     .then((res)=>{
           if(res.data.success){
+            console.log(res)
             toast.success(res.data.message)
             sessionStorage.setItem("isLogin",true)
              sessionStorage.setItem("token", res.data.token)
-              sessionStorage.setItem("name",res.data.data.name)
-              sessionStorage.setItem("email",res.data.data.email)
-              sessionStorage.setItem("userType",res.data.data.userType)
-              sessionStorage.setItem("userId",res.data.data._id)
-              if(res.data.data.userType==1){
-                nav("/admin")
+              sessionStorage.setItem("name",res.data.userData.name)
+              sessionStorage.setItem("email",res.data.userData.email)
+              sessionStorage.setItem("userType",res.data.userData.userType)
+              sessionStorage.setItem("userId",res.data.userData._id)
+              if(res.data.userData.userType==2){
+                nav("/trainer")
               }else{
                 nav("/")
               }
@@ -236,7 +236,7 @@ const handleForm=(data,)=>{
                 </label>
                 <input type="file" className=""
                 name="profile"
-                ref={fileRef} 
+                {...register("profile")}  
                 
 
 

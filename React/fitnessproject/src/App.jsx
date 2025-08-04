@@ -22,6 +22,11 @@ import ManageTrainer from "./components/admin/trainer/ManageTrainer";
 import AddDiet from "./components/trainer/diet/AddDiet";
 import AddCategory from "c:/Users/HP/Downloads/AddCategory";
 import AddBatch from "./components/pages/AddBatch";
+import Manage from "./components/admin/trainer/Manage";
+import ManageDiet from "./components/trainer/diet/ManageDiet";
+import TrainerLayout from "./components/layouts/TrainerLayout";
+import ManageCategory from "c:/Users/HP/Downloads/ManageCategory";
+import Input from "./components/pages/Input";
 
 
 
@@ -46,17 +51,25 @@ function App(){
       </Route>
 
       <Route path="/admin" element={<AdminLayout/>}>
-       <Route path="trainer/register" element={<TrainerRegister/>}/>
+       
        <Route path="trainer/manage" element={<ManageTrainer/>}/>
-       <Route path="addBatch" element={<AddBatch/>}/>
+       <Route path="manage" element={<Manage/>}/>
+
+       <Route path="batch/add" element={<AddBatch/>}/>
+
       </Route>
       
-       <Route path="category" element={<AddCategory/>}/>
+      <Route path="/trainer" element={<TrainerLayout/>}>
+        <Route path="manage" element={<Manage/>}/>
+        <Route path="diet/add" element={<AddDiet/>}/>
+        <Route path="diet/manage" element={<ManageDiet/>}/>
+      </Route>
       
-       <Route path="register" element={<Register/>}/>
-       <Route path="login" element={<Login/>}/>
-       <Route path="addDiet" element={<AddDiet/>}/>
-       <Route path="addBatch" element={<AddBatch/>}/>
+      <Route path="/trainer/register" element={<TrainerRegister/>}/>
+       <Route path="/register" element={<Register/>}/>
+       <Route path="/login" element={<Login/>}/>
+         <Route path="/input" element={<Input/>}/>
+
 
       
       
@@ -79,6 +92,7 @@ function App(){
 
 
     />
+   
     </>
   )
 }
