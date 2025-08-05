@@ -148,18 +148,14 @@ export default function ManageTrainer(){
                            <h5> {el?.status?"Active":"In-active"}</h5>
                         </td>
                         <td className="dark-bg hover-bg">
-                          <button><Switch
+                          <button className="btn"><Switch
                            checked={el?.status}
                            onChange={()=>{
                             changeStatus(el?.userId?._id, el?.status)
                            }}
                           /></button>
-                          <Link className="btn" ><i className="bi bi-pencil-square" ></i></Link>
+                          <Link  to={`/admin/trainer/update/${el.userId._id}/${el._id}`} className="btn btn-success mx-2"> <i className="fa fa-edit"></i></Link>
                         </td>
-
-
-
-
                     </tr>
                 ))}
               </tbody>

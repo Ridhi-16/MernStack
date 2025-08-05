@@ -33,6 +33,9 @@ class ApiServices{
     allDiet(data){
         return axios.post(BASEURL+"/api/diet/all", data )
     }
+    updateTrainer(data){
+        return axios.post(BASEURL+"/admin/trainer/update",data,{headers:this.getToken()})
+    }
     addBatch(data){
         return axios.post(BASEURL+"/admin/batch/add",data,{headers:this.getToken()})
     }

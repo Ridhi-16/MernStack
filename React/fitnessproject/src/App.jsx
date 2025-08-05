@@ -27,6 +27,7 @@ import ManageDiet from "./components/trainer/diet/ManageDiet";
 import TrainerLayout from "./components/layouts/TrainerLayout";
 import ManageCategory from "c:/Users/HP/Downloads/ManageCategory";
 import Input from "./components/pages/Input";
+import UpdateTrainer from "./components/admin/trainer/UpdateTrainer";
 
 
 
@@ -53,6 +54,8 @@ function App(){
       <Route path="/admin" element={<AdminLayout/>}>
        
        <Route path="trainer/manage" element={<ManageTrainer/>}/>
+       <Route path="trainer/update/:id/:_id" element={<UpdateTrainer/>}/>
+
        <Route path="manage" element={<Manage/>}/>
 
        <Route path="batch/add" element={<AddBatch/>}/>
