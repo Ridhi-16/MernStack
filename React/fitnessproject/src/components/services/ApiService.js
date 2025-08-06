@@ -26,6 +26,9 @@ class ApiServices{
     changeStatusDiet(data){
         return axios.post(BASEURL+"/admin/diet/changeStatus", data, {headers:this.getToken()})
     }
+    changeStatusMember(data){
+        return axios.post(BASEURL+"/admin/member/changeStatus", data, {headers:this.getToken()})
+    }
     addDiet(data){
         return axios.post(BASEURL+ "/trainer/diet/add",data,{headers:this.getToken()})
 
@@ -33,12 +36,20 @@ class ApiServices{
     allDiet(data){
         return axios.post(BASEURL+"/api/diet/all", data )
     }
+    allMember(data){
+        return axios.post(BASEURL+"/api/member/all", data )
+    }
+    allBatch(data){
+        return axios.post(BASEURL+"/api/batch/all", data )
+    }
     updateTrainer(data){
         return axios.post(BASEURL+"/admin/trainer/update",data,{headers:this.getToken()})
     }
     addBatch(data){
         return axios.post(BASEURL+"/admin/batch/add",data,{headers:this.getToken()})
     }
-    
+    singleTrainer(data){
+        return axios.post(BASEURL+"/api/trainer/single",data)
+    }
 }
 export default new ApiServices

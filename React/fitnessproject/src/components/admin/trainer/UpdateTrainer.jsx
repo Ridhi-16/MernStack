@@ -4,10 +4,12 @@ import { useFieldArray, useForm } from "react-hook-form";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import ApiService from "../../services/ApiService";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function UpdateTrainer(){
     let {id,_id}=useParams()
+    const [previousImg, setPreviousImg]=useState("")
+    
   let nav=useNavigate()
 const {register,handleSubmit, reset, setValue ,formState:{errors}}=useForm()
 useEffect(()=>{
@@ -20,10 +22,10 @@ const fetchData=()=>{
     let data={
         userId:id
     }
-    axios.post("http://localhost:1415/api/trainer/single",data)
+    ApiService.singleTrainer(data)
     .then((res)=>{
         if(res.data.success){
-            
+            setPreviousImg(res.data.data.profile)
            setValue("name", res.data.data.userId.name);
             setValue("contact", res.data.data.contact );
             setValue("about", res.data.data.about );
@@ -41,12 +43,15 @@ const fetchData=()=>{
 }
 
 const handleForm=(data)=>{
-   
-  const formData = new FormData();  
-
-  const file= data?.profile?.[0];
+  console.log("input data",data)
  
-  formData.append("profile", file);
+  const formData = new FormData();  
+  const file = data?.profile?.[0];
+  if (!!file) {
+    console.log(file);
+    formData.append("profile", file);
+  } 
+
   formData.append("name", data.name);
   formData.append("about", data.about);
   formData.append("email", data.email);
@@ -55,12 +60,14 @@ const handleForm=(data)=>{
   formData.append("experience", data.experience);
   formData.append("specialization", data.specialization);
   formData.append("_id",_id)
+  
   ApiService.updateTrainer(formData)
+  
     .then((res)=>{
         if(res.data.success){
             console.log(res)
             toast.success(res.data.message)
-            // nav("/admin/trainer/manage")
+            nav("/admin/trainer/manage")
         }
         else{
             toast.error(res.data.message)
@@ -207,13 +214,13 @@ const handleForm=(data)=>{
                 <input type="file" className=""
                 name="profile"
                 {...register("profile")}  
-                
-
-
+                // onChange={changeImage}
                 />
+                <div className="div ">
+                <img src={previousImg} style={{width:"50px",height:"50px"}} alt="" />
+                </div>
 
               </div> 
-
               <div className="text-center  login col-12">
                 <p>Terms & Conditions <input type="checkbox" name="" id="terms" /></p>
               </div>

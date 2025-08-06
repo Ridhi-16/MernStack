@@ -129,7 +129,7 @@ export default function ManageTrainer(){
                 {trainers?.map((el,index)=>(
                     <tr key={index}>
                         <td className="class-time text-white"><h2>{index+1}</h2></td>
-                        <td className="dark-bg hover-b">
+                        <td className="dark-bg hover-bg">
                             <h5>{el?.userId?.name}</h5>
                          </td>
                         <td className="hover-bg">

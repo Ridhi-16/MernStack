@@ -28,6 +28,8 @@ import TrainerLayout from "./components/layouts/TrainerLayout";
 import ManageCategory from "c:/Users/HP/Downloads/ManageCategory";
 import Input from "./components/pages/Input";
 import UpdateTrainer from "./components/admin/trainer/UpdateTrainer";
+import ManageBatch from "./components/admin/trainer/ManageBatch";
+import ManageMember from "./components/pages/ManageMember";
 
 
 
@@ -49,6 +51,8 @@ function App(){
         <Route path="classdetails" element={<ClassDetails/>}/>
         <Route path="classtimetable" element={<ClassTimetable/>}/>
         <Route path="contact" element={<Contact/>}/>
+        <Route path="member/manage" element={<ManageMember/>}/>
+
       </Route>
 
       <Route path="/admin" element={<AdminLayout/>}>
@@ -59,6 +63,9 @@ function App(){
        <Route path="manage" element={<Manage/>}/>
 
        <Route path="batch/add" element={<AddBatch/>}/>
+       <Route path="batch/manage" element={<ManageBatch/>}/>
+
+
 
       </Route>
       
