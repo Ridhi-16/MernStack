@@ -6,19 +6,19 @@ import Swal from "sweetalert2"
 import ApiService from "../../services/ApiService"
 import { Link } from "react-router-dom"
 
-export default function ManageDiet(){
-    const[diets,setDiets]=useState([])
+export default function ManageExercise(){
+    const[exercise,setExercise]=useState([])
 
     const fetchData=()=>{
-        ApiService.allDiet()
+        ApiService.allExercise()
         .then((res)=>{
-          console.log(res.data)
-          if(res.data.success){
-                setDiets(res.data.data)
+            console.log(res)
+            if(res.data.success){
+                setExercise(res.data.data)
 
             }
             else{
-                toast.error(res.data.message)
+                toast.error(res.data.essage)
             }
         })
         .catch((err)=>{
@@ -49,7 +49,7 @@ export default function ManageDiet(){
           let headers={
             Authorization:token
           }
-          ApiService.changeStatusDiet(data)
+          ApiService.changeStatusExercise(data)
           .then((res)=>{
             if(res.data.success){
             Swal.fire({
@@ -103,7 +103,7 @@ export default function ManageDiet(){
         <div className="col-lg-12">
           <div className="section-title">
             
-            <h2 className="text-center">Diets</h2>
+            <h2 className="text-center">Exercise</h2>
           </div>
         </div>
         
@@ -116,55 +116,43 @@ export default function ManageDiet(){
                 <tr>
                   
                   <th>S.No</th>
-                  <th> Diet Name</th>
-                  <th>Diet Type</th>
-                  <th>Meal Plan</th>
-                  <th>Restrictions</th>
-                  <th>Protein</th>
-                  <th>Carbohyfrates</th>
-                  <th>Fats</th>
+                  <th>  Name</th>
+                  <th>VideoUrl</th>
+                  <th>No oF Sets</th>
+                  <th>Repetition</th>
                   <th>Status</th>
                   <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
-                {diets?.map((el,index)=>(
+                {exercise?.map((el,index)=>(
                     <tr key={index}>
                         <td className="class-time text-white"><h2>{index+1}</h2></td>
                         <td className="dark-bg hover-b">
-                            <h5>{el?.dietName}</h5>
+                            <h5>{el?.name}</h5>
                          </td>
                         <td className="hover-bg">
-                           <h5> {el?.dietType}</h5>
+                           <h5> {el?.videoUrl}</h5>
                         </td>
                         <td className="dark-bg hover-bg">
-                            <h5>{el?.mealPlan}</h5>
+                            <h5>{el?.noOfSets}</h5>
                          </td>
                          <td className="hover-bg">
-                           <h5> {el?.restrictions}</h5>
+                           <h5> {el?.repetition}</h5>
                         </td>
-                        <td className="dark-bg hover-bg">
-                            <h5>{el?.protein}</h5>
-                         </td>
-                         <td className="hover-bg">
-                           <h5> {el?.carbs}</h5>
-                        </td>
-                        <td className="dark-bg hover-bg">
-                            <h5>{el?.fats}</h5>
-                         </td>
                          
                          <td className="hover-bg">
                            <h5> {el?.status?"Active":"In-active"}</h5>
                         </td>
                         <td className="dark-bg hover-bg">
+
                           <button className="btn"><Switch
                            checked={el?.status}
                            onChange={()=>{
                             changeStatus(el?._id, el?.status)
                            }}
                           /></button>
-                          <Link  to={`/trainer/diet/update/${el._id}`} className="btn btn-success mx-2"> <i className="fa fa-edit"></i></Link>
-
+                          <Link  to={`/trainer/exercise/update/${el._id}`} className="btn btn-success mx-2"> <i className="fa fa-edit"></i></Link>
                         </td>
 
 

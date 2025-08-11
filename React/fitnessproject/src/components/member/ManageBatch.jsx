@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import Switch from "react-switch"
 import { toast } from "react-toastify"
 import Swal from "sweetalert2"
-import ApiService from "../../services/ApiService"
+import ApiService from "../services/ApiService"
 
 export default function ManageBatch(){
     const[batches,setBatches]=useState([])
@@ -68,6 +68,55 @@ export default function ManageBatch(){
 //         })
 //     }})
 //   }
+const handlePayment = (id,fee) => {
+    // console.log(fee ,id);
+    
+            const options = {
+            key: "rzp_test_Q8bKRaQdmgftXW", // Razorpay Key ID
+            amount: fee*100, // Amount in paisa (₹500)
+            currency: "INR",
+            name: "Test project",
+            description: "Product or Service",
+            handler: async function (response) {
+                console.log(response.razorpay_payment_id);
+               
+                let data={
+                    payment:response.razorpay_payment_id,
+                    batchId:id,
+                    fees:fee,
+                    paymentMode:"online",
+                    userId:sessionStorage.getItem("userId")
+                }
+                axios.post("http://localhost:1415/api/register/add", data)
+                
+                .then((res)=>{
+                    if(res.data.success){
+                        console.log(res)
+                        toast.success(res.data.message)
+                        nav("/admin/trainer/manage")
+                    }
+                    else{
+                        toast.error(res.data.message)
+                    } 
+                })
+                .catch((err)=>{
+                    toast.error(err.message)
+                })
+                
+            },
+            prefill: {
+                name: "Ridhi", //sessionStorage.getItem("name")
+                email: "FitnessTracker@gmail.com",//sessionStorage.getItem("email")
+                contact: "9999999999",//sessionStorage.getItem("contact")
+            },
+            theme: {
+                color: "#05cde3ff",
+            },
+            };
+
+            const rzp = new window.Razorpay(options);
+            rzp.open();
+        };
 
 return(
     <>
@@ -78,7 +127,7 @@ return(
         <div className="container  ">
         <div className="row ">
             <div className="col header-margin">
-                <h1 className="text-light text-center">Batches</h1>
+                <h1 className="text-light text-center">Batchs</h1>
             </div>
         </div>
         <div className="row  ">
@@ -99,9 +148,13 @@ return(
                         <li className="list-group-item">{el?.status?"Active":"In-active"}</li>
                     </ul>
                     <div className="card-body">
-                        <Link to="#" className="btn btn-primary">
+                        <button  className="btn btn-primary" onClick={()=>{
+                           handlePayment(el._id,el.fees) 
+                        }}>
                         Register
-                        </Link>
+                        </button>
+                          
+
                     </div>
                 </div>
                 </div>

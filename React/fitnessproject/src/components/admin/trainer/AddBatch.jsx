@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import ApiService from "../services/ApiService";
+import ApiService from "../../services/ApiService";
 
 export default function AddBatch(){
   let nav=useNavigate()
@@ -14,7 +14,7 @@ export default function AddBatch(){
  
   const fetchData=()=>{
             
-            axios.post("http://localhost:1415/api/trainer/all")
+            ApiService.allTrainer()
             .then((res)=>{
                 // console.log("trainerdata",res)
                 if(res.data.success){

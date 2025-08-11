@@ -1,19 +1,42 @@
 import axios from "axios";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import ApiService from "../services/ApiService";
+import ApiService from "../../services/ApiService";
 
-export default function AddBatch(){
+export default function AddProgress(){
   let nav=useNavigate()
   const{register,handleSubmit,reset,formState:{errors}}=useForm()
+  const [memberId, setMemberId]=useState("")
+  const [member,setMember]=useState([])
+  console.log("memberdata",member);
  
+  const fetchData=()=>{
+            
+            ApiService.allMember()
+            .then((res)=>{
+                console.log("memberdata",res)
+                if(res.data.success){
+                  
+                  setMember(res.data.data)
+                  console.log("memberdata",{member});
+                }else{
+                    toast.error(res.data.message)
+                }
+            })
+            .catch((err)=>{
+                toast.error(err.message)
+            })
+        }
+  useEffect(()=>{
+    fetchData()
+  },[])
+  
   const handleForm=(data)=>{
-    
-
+    data.memberId=memberId
     console.log("form Submitted",data);
-    ApiService.addBatch(data)
+    ApiService.addProgress(data)
     .then((res)=>{
       if(res.data.success){
         console.log(res.data)
@@ -45,89 +68,89 @@ export default function AddBatch(){
         <>
         <div className="add-body  " >
           <div className=" add-box login-box  container  add  ">
-            <h2 className="text-dark">ADD BATCH</h2>
+            <h2 className="text-dark">Add Progress</h2>
             <form action="" method="POST" className="row " onSubmit={handleSubmit(handleForm,handleError)}>
               <div className="mb-3 col-md-6 ">
-                <label htmlFor="batchName" className="label">
-                  Batch Name
+                <label htmlFor="weight" className="label">
+                 Weight
                 </label>
                 <input
-                  type="text"
+                  type="number"
                   className="form-control"
-                  id="batchName"
-                  name="batchName"
-                  placeholder="batchName"
+                  id="weight"
+                  name="weight"
+                  placeholder="Enter weight"
                   required=""
-                  {...register("batchName",{
+                  {...register("weight",{
                     required:{
                       value:true,
-                      message:"batchName is req"
+                      message:"weight is req"
                     }
                   })}
                 />
               </div>
               <div className="mb-3 col-md-6">
-                <label htmlFor="startDate" className="label">
-                  Start Date
+                <label htmlFor="height" className="label">
+                Height
                 </label>
                 <input
                 
-                  type="text"
+                  type="number"
                   className="form-control"
-                  id="startDate"
-                  name="startDate"
-                  placeholder=""
+                  id="height"
+                  name="height"
+                  placeholder=" Enter height"
                   required=""
-                  {...register("startDate",{
+                  {...register("height",{
                     required:{
                       value:true,
-                      message:"startDate is req"
+                      message:"height is req"
                     }
                   })}
                 />
               </div>
               <div className="mb-3 col-md-6">
-                <label htmlFor="noOfSlots" className="label">
-                 No Of Slots
+                <label htmlFor="bodyFat" className="label">
+                 BodyFat
                 </label>
                 <input
     
                   type="number"
                   className="form-control"
-                  id="noOfSlots"
-                  name="noOfSlots"
-                  placeholder="Enter noOfSlots"
+                  id="bodyFat"
+                  name="bodyFat"
+                  placeholder="Enter bodyFat"
                   required=""
-                  {...register("noOfSlots",{
+                  {...register("bodyFat",{
                     required:{
                       value:true,
-                      message:"noOfSlots is req"
+                      message:"bodyFat is req"
                     }
                   })}
                 />
               </div>
-              <div className="mb-3 col-md-6">
-                <label htmlFor="session" className="label">
-                 Session
+              {/* <div className="mb-3 col-md-6">
+                <label htmlFor="repetition" className="label">
+                 Repetition
                 </label>
                 <input
              
                   type="text"
                   className="form-control"
-                  id="session"
-                  name="session"
-                  placeholder="Enter session"
+                  id="repetition"
+                  name="repetition"
+                  placeholder="Enter repetition"
                   required=""
-                  {...register("session",{
+                  {...register("repetition",{
                     required:{
                       value:true,
-                      message:"session is req"
+                      message:"repetition is req"
                     }
                   })}
                 />
-              </div>
+              </div> */}
              
-              <div className="col-md-6 mb-3  "> 
+              {/* <div className="col-md-6 mb-3  "> 
                 <label  className="label mr-3">
                   Time
                 </label> 
@@ -149,31 +172,41 @@ export default function AddBatch(){
 
                   
                 </select>
-              </div>
-
-               
+              </div> */}        
               <div className="mb-3 col-md-6">
-                <label htmlFor="fees" className="label">
-                 Fees
+                <label htmlFor="date" className="label">
+                 Date
                 </label>
                 <input
-                  type="number"
+                  type="date"
                   className="form-control"
-                  id="fees"
-                  name="fees"
-                  placeholder=""
+                  id="date"
+                  name="date"
+                  placeholder="Enter Date"
                   required=""
-                  {...register("fees",{
+                  {...register("date",{
                     required:{
                       value:true,
-                      message:"fees is req"
+                      message:"date is req"
                     }
                   })}
                 />
               </div> 
-               
+              <div className="col-md-6 mb-4">
+                <label htmlFor="">Trainer</label>
+                <select value={memberId} onChange={(e)=>{setMemberId(e.target.value)}}>
+                <option value={""} disabled selected>Choose one</option>
+                {member?.map((el,index)=>(
+                
+                <option key={index} value={el?._id}>{el?.userId?.name}</option>
+          
+                ))}
+              </select>
+              </div>
+              
+              
 
-              <div className="col-6 mx-auto" >
+              <div className="col-7 mx-auto" >
                   <button type="submit" className="btn btn-success submit-btn">
                     Submit
                   </button>

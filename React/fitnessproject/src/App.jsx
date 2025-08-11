@@ -21,15 +21,20 @@ import AdminLayout from "./components/layouts/AdminLayout";
 import ManageTrainer from "./components/admin/trainer/ManageTrainer";
 import AddDiet from "./components/trainer/diet/AddDiet";
 import AddCategory from "c:/Users/HP/Downloads/AddCategory";
-import AddBatch from "./components/pages/AddBatch";
+import AddBatch from "./components/admin/trainer/AddBatch";
 import Manage from "./components/admin/trainer/Manage";
 import ManageDiet from "./components/trainer/diet/ManageDiet";
 import TrainerLayout from "./components/layouts/TrainerLayout";
 import ManageCategory from "c:/Users/HP/Downloads/ManageCategory";
 import Input from "./components/pages/Input";
 import UpdateTrainer from "./components/admin/trainer/UpdateTrainer";
-import ManageBatch from "./components/admin/trainer/ManageBatch";
-import ManageMember from "./components/pages/ManageMember";
+import ManageBatch from "./components/member/ManageBatch";
+import ManageMember from "./components/member/ManageMember";
+import AddExercise from "./components/trainer/exercise/AddExercise";
+import AddProgress from "./components/trainer/progress/AddProgress";
+import ManageExercise from "./components/trainer/exercise/ManageExercise";
+import UpdateExercise from "./components/trainer/exercise/UpdateExercise";
+import UpdateDiet from "./components/trainer/diet/UpdateDiet";
 
 
 
@@ -52,6 +57,7 @@ function App(){
         <Route path="classtimetable" element={<ClassTimetable/>}/>
         <Route path="contact" element={<Contact/>}/>
         <Route path="member/manage" element={<ManageMember/>}/>
+        <Route path="batch/manage" element={<ManageBatch/>}/>
 
       </Route>
 
@@ -60,12 +66,10 @@ function App(){
        <Route path="trainer/manage" element={<ManageTrainer/>}/>
        <Route path="trainer/update/:id/:_id" element={<UpdateTrainer/>}/>
 
+
        <Route path="manage" element={<Manage/>}/>
 
        <Route path="batch/add" element={<AddBatch/>}/>
-       <Route path="batch/manage" element={<ManageBatch/>}/>
-
-
 
       </Route>
       
@@ -73,6 +77,16 @@ function App(){
         <Route path="manage" element={<Manage/>}/>
         <Route path="diet/add" element={<AddDiet/>}/>
         <Route path="diet/manage" element={<ManageDiet/>}/>
+        <Route path="diet/update/:id" element={<UpdateDiet/>}/>
+
+        <Route path="exercise/add" element={<AddExercise/>}/>
+        <Route path="exercise/manage" element={<ManageExercise/>}/>
+
+       <Route path="exercise/update/:id" element={<UpdateExercise/>}/>
+
+
+        <Route path="progress/add" element={<AddProgress/>}/>
+
       </Route>
       
       <Route path="/trainer/register" element={<TrainerRegister/>}/>
