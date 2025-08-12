@@ -1,12 +1,13 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, Links, useNavigate } from "react-router-dom"
 import Switch from "react-switch"
 import { toast } from "react-toastify"
 import Swal from "sweetalert2"
-import ApiService from "../services/ApiService"
+import ApiService from "../../services/ApiService"
 
-export default function ManageBatch(){
+
+export default function ManageBatches(){
     const[batches,setBatches]=useState([])
     const[registerBatch,setRegisterBatch]=useState([])
 
@@ -30,28 +31,28 @@ export default function ManageBatch(){
     }
     useEffect(()=>{
         fetchData()
-        registeredBatch()
+        // registeredBatch()
 
     },[])
-    const registeredBatch=()=>{
-        const data={
-            userId:sessionStorage.getItem("userId")
-        }
-        axios.post("http://localhost:1415/api/register/all",data)
-        .then((res)=>{
-            console.log(res)
-            if(res.data.success){
-                  console.log("registerBatch",res.data) 
-                  setRegisterBatch(res.data.data)             
-            }
-            else{
-                toast.error(res.data.message)
-            }
-        })
-        .catch((err)=>{
-            toast.error(err.message)
-        })
-    }
+    // const registeredBatch=()=>{
+    //     const data={
+    //         userId:sessionStorage.getItem("userId")
+    //     }
+    //     axios.post("http://localhost:1415/api/register/all",data)
+    //     .then((res)=>{
+    //         console.log(res)
+    //         if(res.data.success){
+    //               console.log("registerBatch",res.data) 
+    //               setRegisterBatch(res.data.data)             
+    //         }
+    //         else{
+    //             toast.error(res.data.message)
+    //         }
+    //     })
+    //     .catch((err)=>{
+    //         toast.error(err.message)
+    //     })
+    // }
 
 //     const changeStatus=(id,status)=>{
 //       Swal.fire({
@@ -174,14 +175,7 @@ return(
                     </ul>
                     <div className="card-body">
                         {
-                            registerBatch.some(R=> R.batchId._id==el._id)?
-                            "applied"
-                            :
-                            <button  className="btn btn-primary" onClick={()=>{
-                           handlePayment(el._id,el.fees) 
-                        }}>
-                        Register
-                        </button>
+                            <Link to={"/member/manage"} className="btn btn-primary"> View</Link>
                            
                             
                         }

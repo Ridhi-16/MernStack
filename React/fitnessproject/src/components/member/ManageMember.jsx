@@ -12,13 +12,13 @@ export default function ManageMember(){
         ApiService.allMember()
         .then((res)=>{
             console.log(res)
-            if(res.data.sucess){
+            if(res.data.success){
                 setTrainers(res.data.data)
 
             }
             else{
                 toast.error(res.data.essage)
-            }
+            } 
         })
         .catch((err)=>{
             toast.error(err.message)
@@ -105,6 +105,7 @@ export default function ManageMember(){
               </thead>
               <tbody>
                 {trainers?.map((el,index)=>(
+                  
                     <tr key={index}>
                         <td className="class-time text-white"><h2>{index+1}</h2></td>
                         <td className="dark-bg hover-b">

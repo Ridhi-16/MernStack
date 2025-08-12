@@ -35,6 +35,7 @@ import AddProgress from "./components/trainer/progress/AddProgress";
 import ManageExercise from "./components/trainer/exercise/ManageExercise";
 import UpdateExercise from "./components/trainer/exercise/UpdateExercise";
 import UpdateDiet from "./components/trainer/diet/UpdateDiet";
+import ManageBatches from "./components/trainer/batch/ManageBatches";
 
 
 
@@ -75,6 +76,8 @@ function App(){
       
       <Route path="/trainer" element={<TrainerLayout/>}>
         <Route path="manage" element={<Manage/>}/>
+        <Route path="batches/manage" element={<ManageBatches/>}/>
+
         <Route path="diet/add" element={<AddDiet/>}/>
         <Route path="diet/manage" element={<ManageDiet/>}/>
         <Route path="diet/update/:id" element={<UpdateDiet/>}/>
